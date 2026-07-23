@@ -1,0 +1,39 @@
+{
+  "name": "get-codex-theme-monorepo",
+  "version": "0.7.0",
+  "description": "The open Get Codex Theme website, theme-pack schema, CLI, creator Skill, free themes, and reversible compatibility runtime.",
+  "private": true,
+  "license": "MIT",
+  "homepage": "https://getcodextheme.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViisOpen/get-codex-theme.git"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "overrides": {
+    "@better-auth/passkey": "1.6.23",
+    "better-auth": "1.6.23",
+    "postcss": "8.5.21"
+  },
+  "scripts": {
+    "test": "npm run test:core && npm run test:website",
+    "test:core": "node --test packages/theme-cli/test/*.test.mjs tests/*.test.mjs",
+    "test:website": "npm --workspace @getcodextheme/website test",
+    "test:themes": "node packages/theme-cli/bin/get-codex-theme.mjs validate themes/free/* --strict-assets",
+    "test:themes:brand": "node packages/theme-cli/bin/get-codex-theme.mjs validate themes/brand/google-spectrum --strict-assets",
+    "test:runtime": "node --test tests/runtime-*.test.mjs",
+    "test:skill": "python3 plugins/get-codex-theme/skills/create-codex-theme/scripts/theme_pack.py validate themes/free/aurora-glass",
+    "test:package": "node scripts/verify-package.mjs",
+    "dev:website": "npm --workspace @getcodextheme/website run dev",
+    "build:website": "npm --workspace @getcodextheme/website run build",
+    "lint:website": "npm --workspace @getcodextheme/website run lint",
+    "migrate:components": "node scripts/migrate-component-contract.mjs themes/free"
+  },
+  "type": "module"
+}

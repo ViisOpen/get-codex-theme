@@ -1,0 +1,11 @@
+{
+  "$schema": "https://getcodextheme.com/schema/manifest-v1.json", "schemaVersion": 1, "id": "cloud-atelier", "name": "Cloud Atelier",
+  "description": "An airy cloud-white studio with sky-blue depth and architecture placed safely on the right.",
+  "version": "1.0.0", "mode": "light", "author": "Get Codex Theme contributors", "homepage": "https://getcodextheme.com/themes/cloud-atelier",
+  "tags": ["light", "blue", "airy", "architecture", "free"], "platforms": ["macos", "windows"], "delivery": ["visual-cdp"],
+  "palette": { "accent": "#2377C9", "background": "#ECF5FA", "foreground": "#17242D", "muted": "#5E7483", "surface": "rgba(250, 253, 255, 0.83)", "surfaceElevated": "rgba(255, 255, 255, 0.95)", "border": "rgba(38, 78, 104, 0.62)", "codeBackground": "rgba(234, 243, 248, 0.95)", "codeForeground": "#18303E", "inputBackground": "rgba(255, 255, 255, 0.94)", "buttonBackground": "#19303D", "buttonForeground": "#F8FCFF" },
+  "layout": { "focusX": 78, "focusY": 48, "overlayStrength": 0.6, "contentSide": "left" },
+  "assets": { "background16x10": "assets/background.jpg", "background16x9": "assets/background-16x9.jpg", "background4x3": "assets/background-4x3.jpg", "backgroundFallback": "assets/background.jpg", "preview": "assets/preview.jpg", "screenshotHome": "screenshots/home.jpg", "screenshotTask": "screenshots/task.jpg", "screenshotNarrow": "screenshots/narrow.jpg", "tokens": "tokens/visual-theme.json" },
+  "previewMetadata": { "kind": "illustrative", "label": "Illustrative concept preview — not a live Codex capture" },
+  "license": "CC-BY-4.0", "unofficial": true
+}

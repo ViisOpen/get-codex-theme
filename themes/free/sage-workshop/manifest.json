@@ -1,0 +1,11 @@
+{
+  "$schema": "https://getcodextheme.com/schema/manifest-v1.json", "schemaVersion": 1, "id": "sage-workshop", "name": "Sage Workshop",
+  "description": "A calm sage workspace with natural material cues and low-stimulation translucent surfaces.",
+  "version": "1.0.0", "mode": "light", "author": "Get Codex Theme contributors", "homepage": "https://getcodextheme.com/themes/sage-workshop",
+  "tags": ["light", "sage", "natural", "calm", "free"], "platforms": ["macos", "windows"], "delivery": ["visual-cdp"],
+  "palette": { "accent": "#527A62", "background": "#EEF2EA", "foreground": "#1D2A21", "muted": "#637267", "surface": "rgba(250, 252, 247, 0.84)", "surfaceElevated": "rgba(255, 255, 252, 0.95)", "border": "rgba(60, 89, 69, 0.66)", "codeBackground": "rgba(234, 240, 231, 0.95)", "codeForeground": "#243529", "inputBackground": "rgba(253, 255, 250, 0.94)", "buttonBackground": "#263A2C", "buttonForeground": "#F7FCF6" },
+  "layout": { "focusX": 72, "focusY": 46, "overlayStrength": 0.61, "contentSide": "left" },
+  "assets": { "background16x10": "assets/background.jpg", "background16x9": "assets/background-16x9.jpg", "background4x3": "assets/background-4x3.jpg", "backgroundFallback": "assets/background.jpg", "preview": "assets/preview.jpg", "screenshotHome": "screenshots/home.jpg", "screenshotTask": "screenshots/task.jpg", "screenshotNarrow": "screenshots/narrow.jpg", "tokens": "tokens/visual-theme.json" },
+  "previewMetadata": { "kind": "illustrative", "label": "Illustrative concept preview — not a live Codex capture" },
+  "license": "CC-BY-4.0", "unofficial": true
+}

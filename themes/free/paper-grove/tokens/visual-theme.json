@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 2,
+  "id": "paper-grove",
+  "mode": "light",
+  "palette": {
+    "accent": "#66806A",
+    "background": "#F0F0E9",
+    "foreground": "#263029",
+    "muted": "#68736B",
+    "surface": "rgba(253, 253, 248, 0.83)",
+    "surfaceElevated": "rgba(255, 255, 255, 0.96)",
+    "border": "rgba(72, 96, 78, 0.70)",
+    "codeBackground": "rgba(234, 237, 230, 0.95)",
+    "codeForeground": "#26342B",
+    "inputBackground": "rgba(255, 255, 255, 0.94)",
+    "buttonBackground": "#3F5D48",
+    "buttonForeground": "#F9FCF8"
+  },
+  "layout": {
+    "focusX": 79,
+    "focusY": 49,
+    "overlayStrength": 0.46,
+    "contentSide": "left"
+  },
+  "componentSchemaVersion": 2,
+  "authoring": {
+    "path": "assisted",
+    "fallback": "adaptive",
+    "source": "manual",
+    "preset": "soft"
+  },
+  "coverage": {
+    "target": "complete",
+    "enabled": [
+      "foundation",
+      "buttons",
+      "icons",
+      "overlaysAndForms",
+      "taskArtifacts",
+      "feedback",
+      "utilityRoutes"
+    ],
+    "customized": [],
+    "generated": [
+      "foundation",
+      "buttons",
+      "icons",
+      "overlaysAndForms",
+      "taskArtifacts",
+      "feedback",
+      "utilityRoutes"
+    ]
+  },
+  "components": {
+    "foundation": {
+      "surface": "rgba(253, 253, 248, 0.83)",
+      "surfaceElevated": "rgba(255, 255, 255, 0.96)",
+      "border": "rgba(72, 96, 78, 0.70)",
+      "focusRing": "#66806A"
+    },
+    "buttons": {
+      "disabledOpacity": 0.48,
+      "primaryBackground": "#3F5D48",
+      "primaryForeground": "#F9FCF8",
+      "secondaryBackground": "rgba(255, 255, 255, 0.96)",
+      "secondaryForeground": "#263029",
+      "hoverBackground": "rgba(102, 128, 106, 0.14)",
+      "destructiveBackground": "#66806A",
+      "destructiveForeground": "#F9FCF8"
+    },
+    "icons": {
+      "foreground": "#263029",
+      "muted": "#68736B",
+      "accent": "#66806A",
+      "danger": "#66806A",
+      "containerBackground": "rgba(102, 128, 106, 0.13)"
+    },
+    "overlaysAndForms": {
+      "background": "rgba(255, 255, 255, 0.96)",
+      "foreground": "#263029",
+      "muted": "#68736B",
+      "border": "rgba(72, 96, 78, 0.70)",
+      "inputBackground": "rgba(255, 255, 255, 0.94)",
+      "focusRing": "#66806A",
+      "selectedBackground": "rgba(102, 128, 106, 0.14)"
+    },
+    "taskArtifacts": {
+      "background": "rgba(253, 253, 248, 0.83)",
+      "toolBackground": "rgba(255, 255, 255, 0.96)",
+      "codeBackground": "rgba(234, 237, 230, 0.95)",
+      "codeForeground": "#26342B",
+      "terminalBackground": "rgba(234, 237, 230, 0.95)",
+      "diffAdded": "rgba(102, 128, 106, 0.2)",
+      "diffRemoved": "rgba(102, 128, 106, 0.2)",
+      "border": "rgba(72, 96, 78, 0.70)"
+    },
+    "feedback": {
+      "success": "#66806A",
+      "warning": "#66806A",
+      "danger": "#66806A",
+      "info": "#66806A",
+      "badgeBackground": "rgba(102, 128, 106, 0.14)",
+      "loadingAccent": "#66806A"
+    },
+    "utilityRoutes": {
+      "background": "rgba(253, 253, 248, 0.83)",
+      "foreground": "#263029",
+      "muted": "#68736B",
+      "activeBackground": "rgba(102, 128, 106, 0.14)",
+      "activeForeground": "#263029",
+      "hoverBackground": "rgba(102, 128, 106, 0.09)",
+      "border": "rgba(72, 96, 78, 0.70)"
+    }
+  }
+}

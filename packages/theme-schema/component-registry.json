@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 2,
+  "profile": "codex-components-2",
+  "groups": [
+    { "id": "foundation", "weight": 20, "requiredForPublic": true, "description": "Surface, border and focus colors with native Codex geometry." },
+    { "id": "buttons", "weight": 15, "description": "Primary, secondary, ghost, destructive, icon and stateful buttons." },
+    { "id": "icons", "weight": 10, "description": "Semantic icon colors and safe container colors; native size and stroke are preserved." },
+    { "id": "overlaysAndForms", "weight": 15, "description": "Dialogs, menus, popovers, tooltips and form controls." },
+    { "id": "taskArtifacts", "weight": 20, "description": "Messages, approvals, tool calls, attachments, code, diffs, terminal and tables." },
+    { "id": "feedback", "weight": 10, "description": "Toasts, badges, progress, skeletons and semantic states." },
+    { "id": "utilityRoutes", "weight": 10, "description": "Home, task, scheduled, plugins, pull requests, chat and search surfaces." }
+  ],
+  "compatibility": {
+    "owner": "runtime",
+    "authorMayProvideSelectors": false,
+    "authorMayProvideCode": false,
+    "appearanceOnly": true,
+    "legacyAccepted": false,
+    "nativeInvariantProfile": "codex-native-1",
+    "protectedSurfaces": ["sidebar", "suggestions", "composer", "attachments"],
+    "fallback": "per-surface-native"
+  }
+}

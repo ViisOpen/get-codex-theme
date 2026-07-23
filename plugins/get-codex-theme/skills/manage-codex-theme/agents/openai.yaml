@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Codex Themes"
+  short_description: "Install, switch, diagnose, and restore Codex themes"
+  default_prompt: "Use $manage-codex-theme to install a Codex theme and verify it safely."

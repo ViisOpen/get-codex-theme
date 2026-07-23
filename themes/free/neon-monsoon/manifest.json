@@ -1,0 +1,11 @@
+{
+  "$schema": "https://getcodextheme.com/schema/manifest-v1.json", "schemaVersion": 1, "id": "neon-monsoon", "name": "Neon Monsoon",
+  "description": "A rain-polished midnight arcade with disciplined cyan and orchid light placed beyond the primary reading field.",
+  "version": "1.0.0", "mode": "dark", "author": "Get Codex Theme contributors", "homepage": "https://getcodextheme.com/themes/neon-monsoon",
+  "tags": ["dark", "neon", "rain", "architecture", "cinematic", "free"], "platforms": ["macos", "windows"], "delivery": ["visual-cdp"],
+  "palette": { "accent": "#51D7FF", "background": "#030914", "foreground": "#F1F7FF", "muted": "#9AA9BE", "surface": "rgba(5, 14, 28, 0.86)", "surfaceElevated": "rgba(11, 26, 49, 0.94)", "border": "rgba(92, 205, 255, 0.47)", "codeBackground": "rgba(2, 7, 16, 0.95)", "codeForeground": "#EAF7FF", "inputBackground": "rgba(8, 20, 39, 0.94)", "buttonBackground": "#7FE5FF", "buttonForeground": "#04131F" },
+  "layout": { "focusX": 81, "focusY": 47, "overlayStrength": 0.68, "contentSide": "left" },
+  "assets": { "background16x10": "assets/background.jpg", "background16x9": "assets/background-16x9.jpg", "background4x3": "assets/background-4x3.jpg", "backgroundFallback": "assets/background.jpg", "preview": "assets/preview.jpg", "screenshotHome": "screenshots/home.jpg", "screenshotTask": "screenshots/task.jpg", "screenshotNarrow": "screenshots/narrow.jpg", "tokens": "tokens/visual-theme.json" },
+  "previewMetadata": { "kind": "illustrative", "label": "Illustrative concept preview — not a live Codex capture" },
+  "license": "CC-BY-4.0", "unofficial": true
+}

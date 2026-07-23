@@ -1,0 +1,39 @@
+name: Bug report
+description: Report a reproducible problem in the CLI, theme packs, creator Skill, or runtime.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Surface
+      options: [Website, Registry API, Theme pack, CLI, macOS runtime, Windows runtime, Creator Skill]
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version and Codex build
+      placeholder: "Get Codex Theme v0.1.0; Codex Desktop version…"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      placeholder: "1. … 2. … 3. …"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual result
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed API keys, chats, account data, and other private information.
+          required: true

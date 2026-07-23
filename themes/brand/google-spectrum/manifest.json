@@ -1,0 +1,56 @@
+{
+  "$schema": "https://getcodextheme.com/schema/manifest-v1.json",
+  "schemaVersion": 1,
+  "id": "google-spectrum",
+  "name": "Google Spectrum",
+  "description": "A bright Google-inspired Codex workspace with playful software artifacts, semantic Google color roles, and a clear Material-like working canvas.",
+  "version": "1.1.0",
+  "mode": "light",
+  "author": "VIIS Labs",
+  "homepage": "https://getcodextheme.com/themes/concepts/google-spectrum",
+  "tags": ["brand", "google-inspired", "material", "colorful", "light", "local-evaluation"],
+  "platforms": ["macos", "windows"],
+  "delivery": ["visual-cdp"],
+  "palette": {
+    "accent": "#4285F4",
+    "secondary": "#EA4335",
+    "success": "#34A853",
+    "warning": "#FBBC04",
+    "danger": "#D93025",
+    "focusRing": "#1A73E8",
+    "background": "#F8F9FA",
+    "foreground": "#202124",
+    "muted": "#5F6368",
+    "surface": "rgba(255, 255, 255, 0.92)",
+    "surfaceElevated": "#FFFFFF",
+    "border": "rgba(32, 33, 36, 0.65)",
+    "codeBackground": "rgba(241, 243, 244, 0.96)",
+    "codeForeground": "#202124",
+    "inputBackground": "#FFFFFF",
+    "buttonBackground": "#1A73E8",
+    "buttonForeground": "#FFFFFF"
+  },
+  "layout": {
+    "focusX": 78,
+    "focusY": 52,
+    "overlayStrength": 0,
+    "contentSide": "left"
+  },
+  "assets": {
+    "background16x10": "assets/background.jpg",
+    "background16x9": "assets/background-16x9.jpg",
+    "background4x3": "assets/background-4x3.jpg",
+    "backgroundFallback": "assets/background.jpg",
+    "preview": "assets/preview.jpg",
+    "screenshotHome": "screenshots/home.jpg",
+    "screenshotTask": "screenshots/task.jpg",
+    "screenshotNarrow": "screenshots/narrow.jpg",
+    "tokens": "tokens/visual-theme.json"
+  },
+  "previewMetadata": {
+    "kind": "illustrative",
+    "label": "Illustrative concept preview — not a live Codex capture"
+  },
+  "license": "CC-BY-4.0 artwork; no Google brand assets included",
+  "unofficial": true
+}

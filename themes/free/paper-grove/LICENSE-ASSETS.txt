@@ -1,0 +1,7 @@
+Source: Original AI-assisted artwork generated specifically for the Get Codex Theme project.
+Author: Get Codex Theme contributors, commissioned by the project owner.
+Method: Generated with OpenAI built-in image generation on 2026-07-16 from an original layered paper-grove art direction; resized and center-cropped into responsive derivatives; illustrative UI-state previews were composed locally without third-party media.
+Prompt: A sophisticated handcrafted vellum forest with layered paper trees and a winding white path on the right, fading to calm ivory paper texture on the left; no people, animals, text, logos, UI, trademarks, or copyrighted characters.
+License: CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Attribution: “Paper Grove — GetCodexTheme.com”.
+Third-party media: None.

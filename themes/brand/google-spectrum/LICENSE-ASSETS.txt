@@ -1,0 +1,4 @@
+Source: Original Google-inspired companion artwork created for the Get Codex Theme project.
+Author: Artwork generated with OpenAI image generation for VIIS Labs and commissioned by the project owner.
+Method: Original soft-3D software artifacts were generated without text or logos, then manually cropped for 16:10, 16:9, 4:3, preview, and narrow layouts.
+License: Artwork is licensed CC BY 4.0 with attribution “Google Spectrum — GetCodexTheme.com”. No Google logo, wordmark, product screenshot, or other third-party brand asset is included in this pack. This unofficial theme is not sponsored, approved, or endorsed by Google LLC.

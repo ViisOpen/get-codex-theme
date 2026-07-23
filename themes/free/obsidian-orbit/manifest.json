@@ -1,0 +1,29 @@
+{
+  "$schema": "https://getcodextheme.com/schema/manifest-v1.json",
+  "schemaVersion": 1,
+  "id": "obsidian-orbit",
+  "name": "Obsidian Orbit",
+  "description": "An obsidian workspace with restrained orbital light and crisp cool-gray code surfaces.",
+  "version": "1.0.0",
+  "mode": "dark",
+  "author": "Get Codex Theme contributors",
+  "homepage": "https://getcodextheme.com/themes/obsidian-orbit",
+  "tags": ["dark", "minimal", "space", "free"],
+  "platforms": ["macos", "windows"],
+  "delivery": ["visual-cdp"],
+  "palette": {
+    "accent": "#9AA7FF", "background": "#08090C", "foreground": "#F5F7FA", "muted": "#A4AAB5",
+    "surface": "rgba(16, 18, 24, 0.86)", "surfaceElevated": "rgba(26, 29, 38, 0.94)", "border": "rgba(224, 228, 238, 0.40)",
+    "codeBackground": "rgba(8, 10, 14, 0.94)", "codeForeground": "#EDF0F7", "inputBackground": "rgba(19, 21, 28, 0.94)",
+    "buttonBackground": "#E7EAFE", "buttonForeground": "#11131A"
+  },
+  "layout": { "focusX": 74, "focusY": 44, "overlayStrength": 0.78, "contentSide": "left" },
+  "assets": {
+    "background16x10": "assets/background.jpg", "background16x9": "assets/background-16x9.jpg", "background4x3": "assets/background-4x3.jpg",
+    "backgroundFallback": "assets/background.jpg", "preview": "assets/preview.jpg", "screenshotHome": "screenshots/home.jpg",
+    "screenshotTask": "screenshots/task.jpg", "screenshotNarrow": "screenshots/narrow.jpg", "tokens": "tokens/visual-theme.json"
+  },
+  "previewMetadata": { "kind": "illustrative", "label": "Illustrative concept preview — not a live Codex capture" },
+  "license": "CC-BY-4.0",
+  "unofficial": true
+}

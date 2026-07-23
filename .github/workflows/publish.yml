@@ -1,0 +1,84 @@
+name: Publish CLI
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  verify-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+          cache: npm
+      - run: npm install --global npm@12.0.1
+      - run: npm ci
+      - run: npm run test:core
+      - run: npm run test:themes
+      - run: npm run test:skill
+      - name: Verify release version
+        if: github.event_name == 'release'
+        shell: bash
+        run: |
+          package_version="$(node -p "require('./packages/theme-cli/package.json').version")"
+          test "v${package_version}" = "${GITHUB_REF_NAME}"
+      - name: Inspect package contents
+        run: npm run test:package
+      - name: Pack verified release artifact
+        id: pack
+        working-directory: packages/theme-cli
+        shell: bash
+        run: |
+          set -euo pipefail
+          pack_json="$(npm pack --silent --json --pack-destination "$RUNNER_TEMP")"
+          tarball_name="$(node -e 'const fs=require("fs");const report=JSON.parse(fs.readFileSync(0,"utf8"));const artifact=Array.isArray(report)?report[0]:Object.values(report)[0];if(!artifact)process.exit(1);process.stdout.write(artifact.filename)' <<<"$pack_json")"
+          reported_integrity="$(node -e 'const fs=require("fs");const report=JSON.parse(fs.readFileSync(0,"utf8"));const artifact=Array.isArray(report)?report[0]:Object.values(report)[0];if(!artifact)process.exit(1);process.stdout.write(artifact.integrity)' <<<"$pack_json")"
+          tarball_path="$RUNNER_TEMP/$tarball_name"
+          test -f "$tarball_path"
+          local_integrity="$(node -e 'const fs=require("fs"),crypto=require("crypto");const bytes=fs.readFileSync(process.argv[1]);process.stdout.write("sha512-"+crypto.createHash("sha512").update(bytes).digest("base64"))' "$tarball_path")"
+          if [[ "$reported_integrity" != "$local_integrity" ]]; then
+            echo "npm pack integrity does not match the independently computed SHA-512 SRI." >&2
+            exit 1
+          fi
+          echo "tarball=$tarball_path" >> "$GITHUB_OUTPUT"
+          echo "integrity=$local_integrity" >> "$GITHUB_OUTPUT"
+      - name: Verify registry state and publish trusted tarball
+        working-directory: packages/theme-cli
+        shell: bash
+        run: |
+          set -euo pipefail
+          package_version="$(node -p "require('./package.json').version")"
+          error_log="$RUNNER_TEMP/npm-view-error.log"
+          set +e
+          registry_integrity="$(npm view "get-codex-theme@${package_version}" dist.integrity 2>"$error_log")"
+          view_status=$?
+          set -e
+          if [[ $view_status -eq 0 ]]; then
+            if [[ -z "$registry_integrity" ]]; then
+              echo "Registry returned an empty integrity for get-codex-theme@${package_version}." >&2
+              exit 1
+            fi
+            if [[ "$registry_integrity" == "${{ steps.pack.outputs.integrity }}" ]]; then
+              echo "get-codex-theme@${package_version} already has the identical tarball; skipping."
+            else
+              echo "Refusing to skip: registry integrity differs for immutable version ${package_version}." >&2
+              echo "local:    ${{ steps.pack.outputs.integrity }}" >&2
+              echo "registry: $registry_integrity" >&2
+              exit 1
+            fi
+          elif grep -q 'E404' "$error_log"; then
+            npm publish "${{ steps.pack.outputs.tarball }}" --access public
+          else
+            cat "$error_log" >&2
+            echo "Unable to determine registry state; refusing to publish." >&2
+            exit "$view_status"
+          fi

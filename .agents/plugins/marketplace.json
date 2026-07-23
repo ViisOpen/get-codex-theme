@@ -1,0 +1,20 @@
+{
+  "name": "get-codex-theme",
+  "interface": {
+    "displayName": "Get Codex Theme"
+  },
+  "plugins": [
+    {
+      "name": "get-codex-theme",
+      "source": {
+        "source": "local",
+        "path": "./plugins/get-codex-theme"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

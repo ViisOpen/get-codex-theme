@@ -1,0 +1,518 @@
+html.get-codex-theme-active {
+  color-scheme: var(--gct-color-scheme);
+  background: transparent !important;
+  --color-token-foreground: var(--gct-foreground) !important;
+  --color-token-text-primary: var(--gct-foreground) !important;
+  --color-token-text-secondary: var(--gct-muted) !important;
+  --color-token-text-tertiary: var(--gct-muted) !important;
+  --color-token-description-foreground: var(--gct-muted) !important;
+  --color-token-disabled-foreground: color-mix(in srgb, var(--gct-muted) 58%, transparent) !important;
+  --color-token-icon-foreground: var(--gct-muted) !important;
+  --color-token-text-link-foreground: var(--gct-accent) !important;
+  --color-token-text-link-active-foreground: var(--gct-accent) !important;
+  --color-token-focus-border: var(--gct-focus-ring) !important;
+  --color-token-side-bar-background: var(--gct-surface-elevated) !important;
+  --color-token-bg-primary: var(--gct-surface-elevated) !important;
+  --color-token-bg-secondary: var(--gct-surface) !important;
+  --color-token-main-surface-primary: transparent !important;
+  --color-token-input-background: var(--gct-input) !important;
+  --color-token-input-foreground: var(--gct-foreground) !important;
+  --color-token-input-placeholder-foreground: var(--gct-muted) !important;
+  --color-token-input-border: var(--gct-border) !important;
+  --color-token-dropdown-background: var(--gct-surface-elevated) !important;
+  --color-token-dropdown-foreground: var(--gct-foreground) !important;
+  --color-token-menu-background: var(--gct-surface-elevated) !important;
+  --color-token-button-background: var(--gct-button) !important;
+  --color-token-button-foreground: var(--gct-button-foreground) !important;
+  --color-token-text-preformat-foreground: var(--gct-code-foreground) !important;
+  --color-token-text-preformat-background: var(--gct-code-background) !important;
+  --color-token-text-code-block-background: var(--gct-code-background) !important;
+  --color-token-editor-background: var(--gct-code-background) !important;
+  --color-token-editor-foreground: var(--gct-code-foreground) !important;
+  --color-token-terminal-background: var(--gct-code-background) !important;
+  --color-token-terminal-foreground: var(--gct-code-foreground) !important;
+  --color-token-terminal-border: var(--gct-border) !important;
+}
+
+html.get-codex-theme-active body,
+html.get-codex-theme-active #root {
+  color: var(--gct-foreground) !important;
+  background: transparent !important;
+}
+
+/* Codex scopes light aliases on nested surfaces. Rebind color-only aliases at
+   the element that consumes them so dark themes do not produce white-on-white
+   launchers, notices, review actions, or utility controls. */
+html.get-codex-theme-active body * {
+  --color-token-foreground: var(--gct-foreground) !important;
+  --color-token-text-primary: var(--gct-foreground) !important;
+  --color-token-text-secondary: var(--gct-muted) !important;
+  --color-token-text-tertiary: var(--gct-muted) !important;
+  --color-token-description-foreground: var(--gct-muted) !important;
+  --color-token-icon-foreground: var(--gct-muted) !important;
+  --color-token-bg-primary: var(--gct-surface-elevated) !important;
+  --color-token-bg-secondary: var(--gct-surface) !important;
+  --color-token-bg-fog: var(--gct-surface-elevated) !important;
+  --color-token-main-surface-primary: var(--gct-surface-elevated) !important;
+  --color-token-side-bar-background: var(--gct-surface-elevated) !important;
+  --color-background-panel: var(--gct-surface-elevated) !important;
+  --color-token-input-background: var(--gct-input) !important;
+  --color-token-input-foreground: var(--gct-foreground) !important;
+  --color-token-input-placeholder-foreground: var(--gct-muted) !important;
+  --color-token-input-border: var(--gct-border) !important;
+  --color-token-border: var(--gct-border) !important;
+  --color-token-border-default: var(--gct-border) !important;
+  --color-token-border-light: color-mix(in srgb, var(--gct-border) 72%, transparent) !important;
+  --color-token-button-border: var(--gct-border) !important;
+  --color-token-menu-border: var(--gct-border) !important;
+  --color-token-list-hover-background: color-mix(in srgb, var(--gct-accent) 10%, transparent) !important;
+  --color-token-list-active-selection-background: color-mix(in srgb, var(--gct-accent) 16%, var(--gct-surface-elevated)) !important;
+  --color-token-list-active-selection-foreground: var(--gct-foreground) !important;
+  --color-token-list-active-selection-icon-foreground: var(--gct-accent) !important;
+  --color-token-menubar-selection-background: color-mix(in srgb, var(--gct-accent) 12%, var(--gct-surface-elevated)) !important;
+  --color-token-menubar-selection-foreground: var(--gct-foreground) !important;
+  --color-token-toolbar-hover-background: color-mix(in srgb, var(--gct-accent) 10%, transparent) !important;
+  --color-token-button-secondary-hover-background: color-mix(in srgb, var(--gct-accent) 10%, transparent) !important;
+  --color-token-button-primary-background: var(--gct-button) !important;
+  --color-token-button-primary-foreground: var(--gct-button-foreground) !important;
+  --color-token-button-background: var(--gct-button) !important;
+  --color-token-button-foreground: var(--gct-button-foreground) !important;
+  --color-token-button-secondary-foreground: var(--gct-foreground) !important;
+  --color-token-button-tertiary-foreground: var(--gct-foreground) !important;
+  --color-token-badge-background: color-mix(in srgb, var(--gct-accent) 16%, var(--gct-surface-elevated)) !important;
+  --color-token-badge-foreground: var(--gct-foreground) !important;
+  --color-token-dropdown-background: var(--gct-surface-elevated) !important;
+  --color-token-dropdown-foreground: var(--gct-foreground) !important;
+  --color-token-menu-background: var(--gct-surface-elevated) !important;
+  --color-token-editor-widget-background: var(--gct-surface-elevated) !important;
+  --color-token-editor-background: var(--gct-code-background) !important;
+  --color-token-editor-foreground: var(--gct-code-foreground) !important;
+  --color-token-terminal-background: var(--gct-code-background) !important;
+  --color-token-terminal-foreground: var(--gct-code-foreground) !important;
+  --color-token-terminal-border: var(--gct-border) !important;
+  --color-token-checkbox-background: var(--gct-input) !important;
+  --color-token-checkbox-foreground: var(--gct-button-foreground) !important;
+  --color-token-checkbox-border: var(--gct-border) !important;
+  --color-token-radio-active-foreground: var(--gct-button-foreground) !important;
+  --color-token-radio-inactive-border: var(--gct-border) !important;
+  --color-token-progress-bar-background: var(--gct-accent) !important;
+  --color-token-activity-bar-badge-background: var(--gct-accent) !important;
+  --color-token-activity-bar-badge-foreground: var(--gct-button-foreground) !important;
+  --color-token-scrollbar-slider-background: color-mix(in srgb, var(--gct-accent) 12%, transparent) !important;
+  --color-token-scrollbar-slider-hover-background: color-mix(in srgb, var(--gct-accent) 20%, transparent) !important;
+  --color-token-scrollbar-slider-active-background: color-mix(in srgb, var(--gct-accent) 28%, transparent) !important;
+}
+
+/* Decorative artwork is the only runtime-owned geometry. */
+#get-codex-theme-background {
+  position: fixed;
+  inset: 0;
+  z-index: -2147483647;
+  pointer-events: none;
+  background-color: var(--gct-background);
+  background-image: var(--gct-art-16x10);
+  background-position: var(--gct-focus-x) var(--gct-focus-y);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#get-codex-theme-shell-brand,
+#get-codex-theme-workspace-brand {
+  position: fixed;
+  z-index: 6;
+  pointer-events: none;
+  object-fit: contain;
+  object-position: center;
+}
+
+#get-codex-theme-shell-brand {
+  object-position: left center;
+}
+
+#get-codex-theme-shell-brand[hidden],
+#get-codex-theme-workspace-brand[hidden] {
+  display: none;
+}
+
+html.get-codex-theme-active [data-gct-brand-host="shell"] {
+  color: transparent !important;
+  text-shadow: none !important;
+}
+
+html.get-codex-theme-active [data-gct-brand-host="workspace"] {
+  opacity: 1 !important;
+}
+
+html.get-codex-theme-active [data-gct-brand-host="workspace"] > * {
+  opacity: 0 !important;
+}
+
+@media (min-aspect-ratio: 17 / 10) {
+  #get-codex-theme-background { background-image: var(--gct-art-16x9); }
+}
+
+@media (max-aspect-ratio: 3 / 2) {
+  #get-codex-theme-background { background-image: var(--gct-art-4x3); }
+}
+
+/* Sidebar: colors only. Native spacing, shadows, controls, and hit targets remain untouched. */
+html.get-codex-theme-active:not([data-gct-invariant-sidebar="fallback"]) aside.app-shell-left-panel,
+html.get-codex-theme-active:not([data-gct-invariant-sidebar="fallback"]) aside.app-shell-left-panel * {
+  --color-token-foreground: var(--gct-foreground) !important;
+  --color-token-text-primary: var(--gct-foreground) !important;
+  --color-token-text-secondary: var(--gct-muted) !important;
+  --color-token-text-tertiary: var(--gct-muted) !important;
+  --color-token-icon-foreground: var(--gct-muted) !important;
+  --color-token-button-foreground: var(--gct-foreground) !important;
+  --color-token-list-active-selection-foreground: var(--gct-foreground) !important;
+  --color-token-list-active-selection-icon-foreground: var(--gct-accent) !important;
+  --color-token-menubar-selection-foreground: var(--gct-foreground) !important;
+  --vscode-foreground: var(--gct-foreground) !important;
+  --vscode-descriptionForeground: var(--gct-muted) !important;
+}
+
+html.get-codex-theme-active:not([data-gct-invariant-sidebar="fallback"]) aside.app-shell-left-panel {
+  color: var(--gct-foreground) !important;
+  background: var(--gct-surface-elevated) !important;
+  border-right-color: var(--gct-border) !important;
+}
+
+html.get-codex-theme-active:not([data-gct-invariant-sidebar="fallback"]) aside.app-shell-left-panel::after,
+html.get-codex-theme-active:not([data-gct-invariant-sidebar="fallback"]) aside.app-shell-left-panel nav {
+  background-color: transparent !important;
+}
+
+html.get-codex-theme-active:not([data-gct-invariant-sidebar="fallback"]) aside.app-shell-left-panel button,
+html.get-codex-theme-active:not([data-gct-invariant-sidebar="fallback"]) aside.app-shell-left-panel a {
+  color: var(--gct-foreground) !important;
+}
+
+html.get-codex-theme-active:not([data-gct-invariant-sidebar="fallback"]) aside.app-shell-left-panel svg {
+  color: var(--gct-muted) !important;
+}
+
+html.get-codex-theme-active:not([data-gct-invariant-sidebar="fallback"]) aside.app-shell-left-panel button:hover,
+html.get-codex-theme-active:not([data-gct-invariant-sidebar="fallback"]) aside.app-shell-left-panel a:hover {
+  color: var(--gct-foreground) !important;
+  background-color: color-mix(in srgb, var(--gct-accent) 9%, transparent) !important;
+}
+
+html.get-codex-theme-active:not([data-gct-invariant-sidebar="fallback"]) aside.app-shell-left-panel button:hover svg,
+html.get-codex-theme-active:not([data-gct-invariant-sidebar="fallback"]) aside.app-shell-left-panel a:hover svg {
+  color: var(--gct-accent) !important;
+}
+
+html.get-codex-theme-active:not([data-gct-invariant-sidebar="fallback"]) aside.app-shell-left-panel [aria-current="page"],
+html.get-codex-theme-active:not([data-gct-invariant-sidebar="fallback"]) aside.app-shell-left-panel [data-app-action-sidebar-thread-active="true"],
+html.get-codex-theme-active:not([data-gct-invariant-sidebar="fallback"]) aside.app-shell-left-panel [class~="bg-token-list-hover-background"] {
+  color: color-mix(in srgb, var(--gct-accent) 82%, var(--gct-foreground)) !important;
+  background-color: color-mix(in srgb, var(--gct-accent) 13%, var(--gct-surface-elevated)) !important;
+}
+
+html.get-codex-theme-active:not([data-gct-invariant-sidebar="fallback"]) aside.app-shell-left-panel [aria-current="page"] svg,
+html.get-codex-theme-active:not([data-gct-invariant-sidebar="fallback"]) aside.app-shell-left-panel [data-app-action-sidebar-thread-active="true"] svg {
+  color: var(--gct-accent) !important;
+}
+
+html.get-codex-theme-active main.main-surface,
+html.get-codex-theme-active main.main-surface > header.app-header-tint,
+html.get-codex-theme-active main.main-surface .app-shell-main-content-frame,
+html.get-codex-theme-active main.main-surface .app-shell-main-content-top-fade {
+  color: var(--gct-foreground) !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+html.get-codex-theme-active main.main-surface .thread-scroll-container .bg-gradient-to-t.from-token-main-surface-primary {
+  background-color: transparent !important;
+}
+
+html.get-codex-theme-active[data-gct-route="task"] main.main-surface [role="main"],
+html.get-codex-theme-active[data-gct-route="task"] main.main-surface article,
+html.get-codex-theme-active[data-gct-route="task"] main.main-surface [data-local-conversation-final-assistant] {
+  color: var(--gct-foreground) !important;
+}
+
+/* New-chat suggestions: preserve native card and icon geometry. */
+html.get-codex-theme-active:not([data-gct-invariant-suggestions="fallback"])[data-gct-components~="buttons"]
+  .gct-home [data-gct-component~="button-suggestion"] {
+  color: var(--gct-foreground) !important;
+  background-color: var(--gct-surface-elevated) !important;
+}
+
+html.get-codex-theme-active:not([data-gct-invariant-suggestions="fallback"])[data-gct-components~="buttons"]
+  .gct-home [data-gct-component~="button-suggestion"]:hover {
+  background-color: color-mix(in srgb, var(--gct-accent) 5%, var(--gct-surface-elevated)) !important;
+}
+
+html.get-codex-theme-active:not([data-gct-invariant-suggestions="fallback"])[data-gct-components~="icons"]
+  .gct-home [data-gct-component~="button-suggestion"] > span:first-child > span:first-child {
+  color: var(--gct-accent) !important;
+  background-color: color-mix(in srgb, var(--gct-accent) 13%, transparent) !important;
+}
+
+html.get-codex-theme-active:not([data-gct-invariant-suggestions="fallback"])[data-gct-components~="icons"]
+  .gct-home [data-gct-component~="button-suggestion"]:nth-child(2) > span:first-child > span:first-child {
+  color: var(--gct-secondary) !important;
+  background-color: color-mix(in srgb, var(--gct-secondary) 13%, transparent) !important;
+}
+
+html.get-codex-theme-active:not([data-gct-invariant-suggestions="fallback"])[data-gct-components~="icons"]
+  .gct-home [data-gct-component~="button-suggestion"]:nth-child(3) > span:first-child > span:first-child {
+  color: var(--gct-success) !important;
+  background-color: color-mix(in srgb, var(--gct-success) 13%, transparent) !important;
+}
+
+html.get-codex-theme-active:not([data-gct-invariant-suggestions="fallback"])[data-gct-components~="icons"]
+  .gct-home [data-gct-component~="button-suggestion"]:nth-child(4) > span:first-child > span:first-child {
+  color: color-mix(in srgb, var(--gct-warning) 78%, var(--gct-foreground)) !important;
+  background-color: color-mix(in srgb, var(--gct-warning) 18%, transparent) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="icons"] [data-gct-component~="icon"] {
+  color: currentColor !important;
+}
+
+/* Composer and uploads: appearance only; native position and click areas are protected. */
+html.get-codex-theme-active:not([data-gct-invariant-composer="fallback"]) .composer-surface-chrome {
+  color: var(--gct-foreground) !important;
+  background-color: var(--gct-input) !important;
+  border-color: var(--gct-border) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="buttons"] [data-gct-component~="button-secondary"],
+html.get-codex-theme-active[data-gct-components~="buttons"] [data-gct-component~="button-project"] {
+  color: var(--gct-muted) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="buttons"] [data-gct-component~="button-secondary"]:hover,
+html.get-codex-theme-active[data-gct-components~="buttons"] [data-gct-component~="button-project"]:hover {
+  color: var(--gct-accent) !important;
+  background-color: color-mix(in srgb, var(--gct-accent) 9%, transparent) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="buttons"] [data-gct-component~="button-project"] {
+  background-color: color-mix(in srgb, var(--gct-accent) 7%, var(--gct-surface-elevated)) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="buttons"] [data-gct-component~="button-primary"] {
+  color: var(--gct-buttons-primary-foreground) !important;
+  background-color: var(--gct-buttons-primary-background) !important;
+  border-color: color-mix(in srgb, var(--gct-buttons-primary-background) 76%, var(--gct-border)) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="buttons"]
+  :is([data-gct-component~="button-review"], [data-gct-component~="button-feedback"]) {
+  color: var(--gct-buttons-secondary-foreground) !important;
+  background-color: var(--gct-buttons-secondary-background) !important;
+  border-color: var(--gct-border) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="buttons"]
+  :is([data-gct-component~="button-review"], [data-gct-component~="button-feedback"]):hover {
+  color: var(--gct-foreground) !important;
+  background-color: var(--gct-buttons-hover-background) !important;
+}
+
+/* Settings: preserve native card/control geometry while replacing the local
+   light-only panel and switch colors that bypass the standard token aliases. */
+html.get-codex-theme-active[data-gct-components~="overlaysAndForms"] [data-gct-component~="settings-panel"] {
+  --color-background-panel: var(--gct-overlays-and-forms-background) !important;
+  color: var(--gct-overlays-and-forms-foreground) !important;
+  background-color: var(--gct-overlays-and-forms-background) !important;
+  border-color: var(--gct-overlays-and-forms-border) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="overlaysAndForms"] [data-gct-component~="input-switch"] {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="overlaysAndForms"]
+  [data-gct-component~="input-switch"][data-state="checked"] > span:first-child {
+  background-color: var(--gct-accent) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="overlaysAndForms"]
+  [data-gct-component~="input-switch"][data-state="unchecked"] > span:first-child {
+  background-color: color-mix(in srgb, var(--gct-overlays-and-forms-muted) 24%, var(--gct-overlays-and-forms-input-background)) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="overlaysAndForms"]
+  [data-gct-component~="settings-option-selected"] {
+  color: var(--gct-overlays-and-forms-foreground) !important;
+  background-color: var(--gct-overlays-and-forms-selected-background) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="taskArtifacts"] [data-gct-component~="message"],
+html.get-codex-theme-active[data-gct-components~="taskArtifacts"] [data-gct-component~="approval"] {
+  color: var(--gct-foreground) !important;
+  background-color: var(--gct-task-artifacts-background) !important;
+  border-color: var(--gct-task-artifacts-border) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="overlaysAndForms"] [data-gct-component~="overlay"] {
+  color: var(--gct-overlays-and-forms-foreground) !important;
+  background-color: var(--gct-overlays-and-forms-background) !important;
+  border-color: var(--gct-overlays-and-forms-border) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="overlaysAndForms"] [data-gct-component~="form-field"] {
+  color: var(--gct-overlays-and-forms-foreground) !important;
+  caret-color: var(--gct-accent) !important;
+  background-color: var(--gct-overlays-and-forms-input-background) !important;
+  border-color: var(--gct-overlays-and-forms-border) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="overlaysAndForms"] [data-gct-component~="form-field"]::placeholder,
+html.get-codex-theme-active[data-gct-components~="overlaysAndForms"] .composer-surface-chrome p.placeholder::after {
+  color: var(--gct-overlays-and-forms-muted) !important;
+  opacity: 1 !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="taskArtifacts"] [data-gct-component~="code-block"] {
+  color: var(--gct-task-artifacts-code-foreground) !important;
+  background-color: var(--gct-task-artifacts-code-background) !important;
+  border-color: var(--gct-task-artifacts-border) !important;
+}
+
+html.get-codex-theme-active [data-gct-component]:focus-visible {
+  outline-color: var(--gct-focus-ring) !important;
+}
+
+/* Component contract v2: no geometry or shadow variables exist. */
+html.get-codex-theme-active[data-gct-components~="buttons"] [data-gct-component*="button-"]:is(:disabled, [aria-disabled="true"]) {
+  cursor: not-allowed !important;
+  opacity: var(--gct-buttons-disabled-opacity) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="buttons"] [data-gct-component*="button-"]:is([aria-pressed="true"], [data-state="on"]) {
+  background-color: var(--gct-buttons-hover-background) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="buttons"] [data-gct-component~="button-destructive"] {
+  color: var(--gct-buttons-destructive-foreground) !important;
+  background-color: var(--gct-buttons-destructive-background) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="buttons"]
+  :is([data-gct-component~="button-secondary"], [data-gct-component~="button-navigation"]) {
+  color: var(--gct-buttons-secondary-foreground) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="buttons"]
+  :is([data-gct-component~="button-secondary"], [data-gct-component~="button-navigation"]):hover {
+  background-color: var(--gct-buttons-hover-background) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="icons"]
+  [data-gct-component~="button-icon"]:not([data-gct-component~="button-primary"]):not([data-gct-component~="button-destructive"]):not([data-gct-component~="settings-option-selected"]) {
+  color: var(--gct-icons-muted) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="icons"]
+  [data-gct-component~="button-icon"]:not([data-gct-component~="button-primary"]):not([data-gct-component~="button-destructive"]):not([data-gct-component~="settings-option-selected"]):hover {
+  color: var(--gct-icons-accent) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="buttons"]
+  [data-gct-component~="button-primary"] :is(svg, [data-gct-component~="icon"]) {
+  color: var(--gct-buttons-primary-foreground) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="overlaysAndForms"] [data-gct-component~="form-choice"]:not([data-gct-component~="input-switch"]) {
+  accent-color: var(--gct-accent) !important;
+  border-color: var(--gct-overlays-and-forms-border) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="overlaysAndForms"]
+  [data-gct-component~="form-choice"]:not([data-gct-component~="input-switch"]):is(:checked, [aria-checked="true"], [data-state="checked"]) {
+  color: var(--gct-button-foreground) !important;
+  background-color: var(--gct-accent) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="overlaysAndForms"] [data-gct-component~="form-tab"] {
+  color: var(--gct-overlays-and-forms-muted) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="overlaysAndForms"]
+  [data-gct-component~="form-tab"]:is([aria-selected="true"], [data-state="active"]) {
+  color: var(--gct-overlays-and-forms-foreground) !important;
+  background-color: var(--gct-overlays-and-forms-selected-background) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="taskArtifacts"]
+  :is([data-gct-component~="tool-call"], [data-gct-component~="attachment"]) {
+  color: var(--gct-code-foreground) !important;
+  background-color: var(--gct-task-artifacts-tool-background) !important;
+  border-color: var(--gct-task-artifacts-border) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="taskArtifacts"] [data-gct-component~="terminal"] {
+  color: var(--gct-task-artifacts-code-foreground) !important;
+  background-color: var(--gct-task-artifacts-terminal-background) !important;
+  border-color: var(--gct-task-artifacts-border) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="taskArtifacts"] [data-gct-component~="terminal"]
+  :is(.xterm, .xterm-viewport, .xterm-screen, .xterm-rows, .xterm-rows > div) {
+  color: var(--gct-task-artifacts-code-foreground) !important;
+  background-color: var(--gct-task-artifacts-terminal-background) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="taskArtifacts"] [data-gct-component~="diff"] {
+  --vscode-diffEditor-insertedTextBackground: var(--gct-task-artifacts-diff-added);
+  --vscode-diffEditor-removedTextBackground: var(--gct-task-artifacts-diff-removed);
+  border-color: var(--gct-task-artifacts-border) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="taskArtifacts"]
+  :is([data-gct-component~="table"], [data-gct-component~="quote"]) {
+  color: var(--gct-task-artifacts-code-foreground) !important;
+  background-color: var(--gct-task-artifacts-background) !important;
+  border-color: var(--gct-task-artifacts-border) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="feedback"]
+  :is([data-gct-component~="toast"], [data-gct-component~="alert"], [data-gct-component~="badge"]) {
+  color: var(--gct-foreground) !important;
+  background-color: var(--gct-feedback-badge-background) !important;
+  border-color: var(--gct-border) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="feedback"] [data-gct-component~="alert"] {
+  border-color: var(--gct-feedback-danger) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="feedback"] [data-gct-component~="progress"] {
+  color: var(--gct-feedback-loading-accent) !important;
+  accent-color: var(--gct-feedback-loading-accent) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="feedback"] [data-gct-component~="skeleton"] {
+  background-image: linear-gradient(90deg, var(--gct-surface) 25%, var(--gct-surface-elevated) 50%, var(--gct-surface) 75%) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="utilityRoutes"] [data-gct-component~="utility-surface"] {
+  color: var(--gct-utility-routes-foreground) !important;
+  scrollbar-color: var(--gct-utility-routes-active-background) transparent;
+}
+
+html.get-codex-theme-active[data-gct-components~="utilityRoutes"][data-gct-route]:not([data-gct-route="home"]):not([data-gct-route="task"]):not([data-gct-route="unknown"])
+  [data-gct-component~="utility-surface"] > :is(section, article) {
+  color: var(--gct-utility-routes-foreground) !important;
+  background-color: var(--gct-utility-routes-background) !important;
+  border-color: var(--gct-utility-routes-border) !important;
+}
+
+html.get-codex-theme-active[data-gct-components~="utilityRoutes"] *::-webkit-scrollbar-thumb {
+  background-color: var(--gct-utility-routes-active-background);
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  html.get-codex-theme-active:not([data-gct-invariant-sidebar="fallback"]) aside.app-shell-left-panel,
+  html.get-codex-theme-active:not([data-gct-invariant-composer="fallback"]) .composer-surface-chrome,
+  html.get-codex-theme-active [data-gct-component~="overlay"] {
+    background-color: var(--gct-surface-elevated) !important;
+  }
+}

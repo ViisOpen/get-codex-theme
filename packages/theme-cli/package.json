@@ -1,0 +1,47 @@
+{
+  "name": "get-codex-theme",
+  "version": "0.7.0",
+  "description": "Create, validate, package, install, use, and restore Codex theme packs.",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://getcodextheme.com/open-source",
+  "repository": { "type": "git", "url": "git+https://github.com/ViisOpen/get-codex-theme.git", "directory": "packages/theme-cli" },
+  "keywords": ["codex", "theme", "codex-theme", "desktop-theme"],
+  "bin": {
+    "get-codex-theme": "./bin/get-codex-theme.mjs"
+  },
+  "exports": {
+    ".": "./src/index.mjs",
+    "./palette": "./src/palette.mjs",
+    "./image-theme": "./src/image-theme.mjs",
+    "./components": {
+      "types": "./src/component-contract.d.mts",
+      "import": "./src/component-contract.mjs"
+    }
+  },
+  "files": [
+    "bin",
+    "src",
+    "resources",
+    "README.md",
+    "LICENSE",
+    "NOTICE.md",
+    "NOTICE-RUNTIME.md",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "fflate": "0.8.2",
+    "sharp": "^0.35.3"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "prepack": "node scripts/prepare-package.mjs",
+    "postpack": "node scripts/clean-package.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

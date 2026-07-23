@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://getcodextheme.com/schema/visual-theme-v2.json",
+  "title": "Get Codex Theme visual tokens v2",
+  "description": "Appearance-only theme tokens. Native Codex geometry, placement, ordering, hit targets, shadows, and interaction behavior are not theme-authorable.",
+  "x-native-invariants": {
+    "profile": "codex-native-1",
+    "toleranceCssPixels": 1,
+    "protectedSurfaces": ["sidebar", "suggestions", "composer", "attachments"],
+    "protectedProperties": ["geometry", "position", "order", "display", "spacing", "transform", "shadow", "hitTarget", "pointerBehavior"]
+  },
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "componentSchemaVersion", "id", "mode", "palette", "layout", "authoring", "coverage", "components"],
+  "properties": {
+    "schemaVersion": { "const": 2 },
+    "componentSchemaVersion": { "const": 2 },
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "mode": { "enum": ["dark", "light"] },
+    "palette": { "type": "object" },
+    "layout": {
+      "type": "object",
+      "description": "Background artwork framing only; it never changes Codex UI layout."
+    },
+    "uiTokens": { "type": "object" },
+    "backgroundTreatment": { "type": "object" },
+    "source": { "type": "object" },
+    "accessibility": { "type": "object" },
+    "authoring": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "fallback"],
+      "properties": {
+        "path": { "enum": ["focused", "complete", "assisted"] },
+        "fallback": { "const": "adaptive" },
+        "source": { "enum": ["manual", "image", "brand"] },
+        "preset": {
+          "enum": ["soft", "sharp", "bold", "glass"],
+          "description": "Visual recipe metadata only; it cannot alter native component geometry."
+        }
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["target", "enabled", "customized", "generated"],
+      "properties": {
+        "target": { "enum": ["focused", "complete"] },
+        "enabled": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "#/$defs/componentGroup" } },
+        "customized": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/componentGroup" } },
+        "generated": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/componentGroup" } }
+      }
+    },
+    "components": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "foundation": { "$ref": "#/$defs/foundation" },
+        "buttons": { "$ref": "#/$defs/buttons" },
+        "icons": { "$ref": "#/$defs/icons" },
+        "overlaysAndForms": { "$ref": "#/$defs/overlaysAndForms" },
+        "taskArtifacts": { "$ref": "#/$defs/taskArtifacts" },
+        "feedback": { "$ref": "#/$defs/feedback" },
+        "utilityRoutes": { "$ref": "#/$defs/utilityRoutes" }
+      }
+    }
+  },
+  "$defs": {
+    "componentGroup": { "enum": ["foundation", "buttons", "icons", "overlaysAndForms", "taskArtifacts", "feedback", "utilityRoutes"] },
+    "color": { "type": "string", "pattern": "^(#[0-9A-Fa-f]{6}|rgba?\\([^\\r\\n]+\\))$" },
+    "foundation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "surface": { "$ref": "#/$defs/color" },
+        "surfaceElevated": { "$ref": "#/$defs/color" },
+        "border": { "$ref": "#/$defs/color" },
+        "focusRing": { "$ref": "#/$defs/color" }
+      }
+    },
+    "buttons": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "disabledOpacity": { "type": "number", "minimum": 0.2, "maximum": 1 },
+        "primaryBackground": { "$ref": "#/$defs/color" },
+        "primaryForeground": { "$ref": "#/$defs/color" },
+        "secondaryBackground": { "$ref": "#/$defs/color" },
+        "secondaryForeground": { "$ref": "#/$defs/color" },
+        "hoverBackground": { "$ref": "#/$defs/color" },
+        "destructiveBackground": { "$ref": "#/$defs/color" },
+        "destructiveForeground": { "$ref": "#/$defs/color" }
+      }
+    },
+    "icons": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "foreground": { "$ref": "#/$defs/color" },
+        "muted": { "$ref": "#/$defs/color" },
+        "accent": { "$ref": "#/$defs/color" },
+        "danger": { "$ref": "#/$defs/color" },
+        "containerBackground": { "$ref": "#/$defs/color" }
+      }
+    },
+    "overlaysAndForms": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "background": { "$ref": "#/$defs/color" },
+        "foreground": { "$ref": "#/$defs/color" },
+        "muted": { "$ref": "#/$defs/color" },
+        "border": { "$ref": "#/$defs/color" },
+        "inputBackground": { "$ref": "#/$defs/color" },
+        "focusRing": { "$ref": "#/$defs/color" },
+        "selectedBackground": { "$ref": "#/$defs/color" }
+      }
+    },
+    "taskArtifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "background": { "$ref": "#/$defs/color" },
+        "toolBackground": { "$ref": "#/$defs/color" },
+        "codeBackground": { "$ref": "#/$defs/color" },
+        "codeForeground": { "$ref": "#/$defs/color" },
+        "terminalBackground": { "$ref": "#/$defs/color" },
+        "diffAdded": { "$ref": "#/$defs/color" },
+        "diffRemoved": { "$ref": "#/$defs/color" },
+        "border": { "$ref": "#/$defs/color" }
+      }
+    },
+    "feedback": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "success": { "$ref": "#/$defs/color" },
+        "warning": { "$ref": "#/$defs/color" },
+        "danger": { "$ref": "#/$defs/color" },
+        "info": { "$ref": "#/$defs/color" },
+        "badgeBackground": { "$ref": "#/$defs/color" },
+        "loadingAccent": { "$ref": "#/$defs/color" }
+      }
+    },
+    "utilityRoutes": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "background": { "$ref": "#/$defs/color" },
+        "foreground": { "$ref": "#/$defs/color" },
+        "muted": { "$ref": "#/$defs/color" },
+        "activeBackground": { "$ref": "#/$defs/color" },
+        "activeForeground": { "$ref": "#/$defs/color" },
+        "hoverBackground": { "$ref": "#/$defs/color" },
+        "border": { "$ref": "#/$defs/color" }
+      }
+    }
+  }
+}

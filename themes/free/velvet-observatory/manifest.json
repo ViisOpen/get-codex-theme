@@ -1,0 +1,11 @@
+{
+  "$schema": "https://getcodextheme.com/schema/manifest-v1.json", "schemaVersion": 1, "id": "velvet-observatory", "name": "Velvet Observatory",
+  "description": "A burgundy observatory with antique brass instruments, quiet celestial depth, and a protected reading field.",
+  "version": "1.0.0", "mode": "dark", "author": "Get Codex Theme contributors", "homepage": "https://getcodextheme.com/themes/velvet-observatory",
+  "tags": ["dark", "burgundy", "brass", "observatory", "cinematic", "free"], "platforms": ["macos", "windows"], "delivery": ["visual-cdp"],
+  "palette": { "accent": "#C79A5B", "background": "#12080C", "foreground": "#FAF3EA", "muted": "#C5AEB0", "surface": "rgba(27, 11, 17, 0.86)", "surfaceElevated": "rgba(43, 20, 27, 0.94)", "border": "rgba(224, 183, 124, 0.48)", "codeBackground": "rgba(12, 5, 8, 0.94)", "codeForeground": "#F8EBDD", "inputBackground": "rgba(35, 15, 22, 0.94)", "buttonBackground": "#E8C58F", "buttonForeground": "#25110F" },
+  "layout": { "focusX": 78, "focusY": 48, "overlayStrength": 0.58, "contentSide": "left" },
+  "assets": { "background16x10": "assets/background.jpg", "background16x9": "assets/background-16x9.jpg", "background4x3": "assets/background-4x3.jpg", "backgroundFallback": "assets/background.jpg", "preview": "assets/preview.jpg", "screenshotHome": "screenshots/home.jpg", "screenshotTask": "screenshots/task.jpg", "screenshotNarrow": "screenshots/narrow.jpg", "tokens": "tokens/visual-theme.json" },
+  "previewMetadata": { "kind": "illustrative", "label": "Illustrative concept preview — not a live Codex capture" },
+  "license": "CC-BY-4.0", "unofficial": true
+}

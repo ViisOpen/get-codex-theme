@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Codex Theme"
+  short_description: "Create and release-check Codex themes"
+  default_prompt: "Use $create-codex-theme to turn my landscape artwork and color preferences into a validated Codex theme pack."

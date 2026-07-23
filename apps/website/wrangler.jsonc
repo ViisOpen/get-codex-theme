@@ -1,0 +1,61 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "getcodextheme-production",
+  "main": "dist/server/index.js",
+  "compatibility_date": "2026-07-21",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "routes": [
+    {
+      "pattern": "getcodextheme.com/*",
+      "zone_name": "getcodextheme.com"
+    }
+  ],
+  "no_bundle": true,
+  "rules": [
+    {
+      "type": "ESModule",
+      "globs": ["**/*.js", "**/*.mjs"]
+    }
+  ],
+  "assets": {
+    "directory": "dist/client",
+    "binding": "ASSETS"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "getcodextheme-production",
+      "database_id": "2d9e344c-de60-4842-b7e0-dbde9592ee85",
+      "migrations_dir": "drizzle"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "THEME_ASSETS",
+      "bucket_name": "getcodextheme-theme-assets"
+    }
+  ],
+  "vars": {
+    "SITE_URL": "https://getcodextheme.com",
+    "ENVIRONMENT": "production"
+  },
+  "secrets": {
+    "required": [
+      "NEON_AUTH_BASE_URL",
+      "NEON_AUTH_COOKIE_SECRET",
+      "LIKE_HASH_SECRET"
+    ]
+  },
+  "observability": {
+    "enabled": true,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1
+    },
+    "traces": {
+      "enabled": true,
+      "head_sampling_rate": 0.01
+    }
+  }
+}

@@ -1,0 +1,7 @@
+Source: Original AI-assisted artwork generated specifically for the Get Codex Theme project.
+Author: Get Codex Theme contributors, commissioned by the project owner.
+Method: Generated with OpenAI built-in image generation on 2026-07-16 from an original neon monsoon architectural art direction; resized and center-cropped into responsive derivatives; illustrative UI-state previews were composed locally without third-party media.
+Prompt: A sophisticated near-future glass arcade in tropical night rain with cyan and orchid illumination on the right and a protected midnight reading field on the left; no people, signs, text, logos, UI, trademarks, or copyrighted characters.
+License: CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Attribution: “Neon Monsoon — GetCodexTheme.com”.
+Third-party media: None.

@@ -1,0 +1,4 @@
+Source: Original abstract background generated from a user-supplied visual-style reference; no source pixels were copied. The Codex Hub wordmark and illustrative preview layouts were created specifically for this theme.
+Author: VIIS Labs
+Method: OpenAI image generation for the original background, local responsive cropping, and code-native rendering for the wordmark and illustrative previews. Final assets were reviewed and edited for legibility and responsive composition.
+License: Creative Commons Attribution 4.0 International (CC BY 4.0). Redistribution and adaptation are permitted with attribution to VIIS Labs.

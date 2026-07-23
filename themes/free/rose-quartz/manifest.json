@@ -1,0 +1,11 @@
+{
+  "$schema": "https://getcodextheme.com/schema/manifest-v1.json", "schemaVersion": 1, "id": "rose-quartz", "name": "Rose Quartz",
+  "description": "A polished rose-quartz atmosphere with pale gray balance and softly translucent interface layers.",
+  "version": "1.0.0", "mode": "light", "author": "Get Codex Theme contributors", "homepage": "https://getcodextheme.com/themes/rose-quartz",
+  "tags": ["light", "rose", "glass", "lifestyle", "free"], "platforms": ["macos", "windows"], "delivery": ["visual-cdp"],
+  "palette": { "accent": "#A94F72", "background": "#F7EEF2", "foreground": "#30242A", "muted": "#78666E", "surface": "rgba(255, 250, 252, 0.84)", "surfaceElevated": "rgba(255, 253, 254, 0.96)", "border": "rgba(125, 72, 93, 0.68)", "codeBackground": "rgba(244, 235, 239, 0.95)", "codeForeground": "#3A2931", "inputBackground": "rgba(255, 252, 253, 0.95)", "buttonBackground": "#4A2C39", "buttonForeground": "#FFF7FA" },
+  "layout": { "focusX": 73, "focusY": 47, "overlayStrength": 0.6, "contentSide": "left" },
+  "assets": { "background16x10": "assets/background.jpg", "background16x9": "assets/background-16x9.jpg", "background4x3": "assets/background-4x3.jpg", "backgroundFallback": "assets/background.jpg", "preview": "assets/preview.jpg", "screenshotHome": "screenshots/home.jpg", "screenshotTask": "screenshots/task.jpg", "screenshotNarrow": "screenshots/narrow.jpg", "tokens": "tokens/visual-theme.json" },
+  "previewMetadata": { "kind": "illustrative", "label": "Illustrative concept preview — not a live Codex capture" },
+  "license": "CC-BY-4.0", "unofficial": true
+}

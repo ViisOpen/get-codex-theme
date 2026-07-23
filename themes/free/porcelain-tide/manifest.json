@@ -1,0 +1,11 @@
+{
+  "$schema": "https://getcodextheme.com/schema/manifest-v1.json", "schemaVersion": 1, "id": "porcelain-tide", "name": "Porcelain Tide",
+  "description": "Cobalt ceramic ribbons, warm ivory plaster, and fine gold edges create a tactile gallery-like workspace.",
+  "version": "1.0.0", "mode": "light", "author": "Get Codex Theme contributors", "homepage": "https://getcodextheme.com/themes/porcelain-tide",
+  "tags": ["light", "porcelain", "cobalt", "ceramic", "gallery", "free"], "platforms": ["macos", "windows"], "delivery": ["visual-cdp"],
+  "palette": { "accent": "#2456B4", "background": "#F5F0E8", "foreground": "#1D2736", "muted": "#697181", "surface": "rgba(255, 253, 248, 0.82)", "surfaceElevated": "rgba(255, 255, 255, 0.96)", "border": "rgba(36, 71, 132, 0.61)", "codeBackground": "rgba(235, 237, 240, 0.94)", "codeForeground": "#202B3C", "inputBackground": "rgba(255, 255, 255, 0.94)", "buttonBackground": "#234C98", "buttonForeground": "#F8FAFF" },
+  "layout": { "focusX": 80, "focusY": 48, "overlayStrength": 0.44, "contentSide": "left" },
+  "assets": { "background16x10": "assets/background.jpg", "background16x9": "assets/background-16x9.jpg", "background4x3": "assets/background-4x3.jpg", "backgroundFallback": "assets/background.jpg", "preview": "assets/preview.jpg", "screenshotHome": "screenshots/home.jpg", "screenshotTask": "screenshots/task.jpg", "screenshotNarrow": "screenshots/narrow.jpg", "tokens": "tokens/visual-theme.json" },
+  "previewMetadata": { "kind": "illustrative", "label": "Illustrative concept preview — not a live Codex capture" },
+  "license": "CC-BY-4.0", "unofficial": true
+}

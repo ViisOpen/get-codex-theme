@@ -1,0 +1,73 @@
+{
+  "$schema": "https://getcodextheme.com/schema/manifest-v2.json",
+  "schemaVersion": 2,
+  "id": "codexhub",
+  "name": "Codex Hub",
+  "description": "A sharp black-and-orange developer console theme with technical-grid artwork and high-contrast Codex surfaces.",
+  "tagline": "Build in black. Ship in orange.",
+  "designStory": "Codex Hub combines technical-grid artwork with high-contrast black surfaces and orange action states for a focused developer-console feel. It preserves Codex's native control geometry, ordering, spacing, and hit targets, while responsive artwork keeps the visual hierarchy legible across Home, Task, and narrow windows.",
+  "version": "1.0.1",
+  "mode": "dark",
+  "author": "VIIS Labs",
+  "homepage": "https://getcodextheme.com/themes/codexhub",
+  "tags": [
+    "dark",
+    "black",
+    "orange",
+    "developer",
+    "brand"
+  ],
+  "platforms": [
+    "macos",
+    "windows"
+  ],
+  "delivery": [
+    "visual-cdp"
+  ],
+  "palette": {
+    "accent": "#FFA31A",
+    "secondary": "#FF7A00",
+    "success": "#65D142",
+    "warning": "#FFC15A",
+    "danger": "#FF4D55",
+    "focusRing": "#FFA31A",
+    "background": "#050505",
+    "foreground": "#F5F5F5",
+    "muted": "#9A9A9A",
+    "surface": "rgba(8, 8, 8, 0.90)",
+    "surfaceElevated": "rgba(15, 15, 15, 0.96)",
+    "border": "rgba(255, 255, 255, 0.40)",
+    "codeBackground": "rgba(4, 4, 4, 0.97)",
+    "codeForeground": "#F5F5F5",
+    "inputBackground": "rgba(7, 7, 7, 0.96)",
+    "buttonBackground": "#FFA31A",
+    "buttonForeground": "#070707"
+  },
+  "layout": {
+    "focusX": 54.17,
+    "focusY": 48.82,
+    "overlayStrength": 0,
+    "contentSide": "center"
+  },
+  "assets": {
+    "background16x10": "assets/background.jpg",
+    "background16x9": "assets/background-16x9.jpg",
+    "background4x3": "assets/background-4x3.jpg",
+    "backgroundFallback": "assets/background.jpg",
+    "preview": "assets/preview.jpg",
+    "screenshotHome": "screenshots/home.jpg",
+    "screenshotTask": "screenshots/task.jpg",
+    "screenshotNarrow": "screenshots/narrow.jpg",
+    "tokens": "tokens/visual-theme.json",
+    "brandLogo": "assets/brand-logo.png",
+    "previewEvidence": "screenshots/preview-evidence.json"
+  },
+  "previewMetadata": {
+    "kind": "illustrative",
+    "renderer": "html-css",
+    "rendererVersion": "1.0.0",
+    "label": "Illustrative HTML/CSS Codex preview — no user data"
+  },
+  "license": "CC-BY-4.0",
+  "unofficial": true
+}

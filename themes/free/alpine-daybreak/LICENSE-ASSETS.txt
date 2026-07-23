@@ -1,0 +1,7 @@
+Source: Original AI-assisted artwork generated specifically for the Get Codex Theme project.
+Author: Get Codex Theme contributors, commissioned by the project owner.
+Method: Generated with OpenAI built-in image generation on 2026-07-16 from an original alpine studio art direction; resized and center-cropped into responsive derivatives; illustrative UI-state previews were composed locally without third-party media.
+Prompt: A serene alpine design studio at daybreak with snow mountains, pale lake, warm oak, and a paper lamp on the right with an off-white reading field on the left; no people, screens, text, logos, UI, trademarks, or copyrighted characters.
+License: CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Attribution: “Alpine Daybreak — GetCodexTheme.com”.
+Third-party media: None.

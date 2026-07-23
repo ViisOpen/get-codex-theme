@@ -1,0 +1,176 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://getcodextheme.com/schema/manifest-v2.json",
+  "title": "Get Codex Theme publishing manifest",
+  "description": "An unofficial Codex Desktop theme pack manifest with a reviewable public presentation contract.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "name",
+    "description",
+    "tagline",
+    "designStory",
+    "version",
+    "mode",
+    "tags",
+    "platforms",
+    "delivery",
+    "palette",
+    "layout",
+    "assets",
+    "previewMetadata",
+    "license",
+    "unofficial"
+  ],
+  "properties": {
+    "$schema": { "type": "string", "format": "uri-reference" },
+    "schemaVersion": { "const": 2 },
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$", "maxLength": 64 },
+    "name": { "type": "string", "minLength": 2, "maxLength": 80 },
+    "description": { "type": "string", "minLength": 40, "maxLength": 240 },
+    "tagline": { "type": "string", "minLength": 12, "maxLength": 100 },
+    "designStory": { "type": "string", "minLength": 120, "maxLength": 1200 },
+    "version": { "type": "string", "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$" },
+    "mode": { "enum": ["dark", "light"] },
+    "author": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "homepage": { "type": "string", "format": "uri" },
+    "tags": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 12,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$", "maxLength": 32 }
+    },
+    "platforms": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "enum": ["macos", "windows"] }
+    },
+    "delivery": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "enum": ["native-if-supported", "visual-cdp"] }
+    },
+    "palette": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "accent",
+        "background",
+        "foreground",
+        "muted",
+        "surface",
+        "surfaceElevated",
+        "border",
+        "codeBackground",
+        "codeForeground",
+        "inputBackground",
+        "buttonBackground",
+        "buttonForeground"
+      ],
+      "properties": {
+        "accent": { "$ref": "#/$defs/color" },
+        "secondary": { "$ref": "#/$defs/color" },
+        "success": { "$ref": "#/$defs/color" },
+        "warning": { "$ref": "#/$defs/color" },
+        "danger": { "$ref": "#/$defs/color" },
+        "focusRing": { "$ref": "#/$defs/color" },
+        "background": { "$ref": "#/$defs/color" },
+        "foreground": { "$ref": "#/$defs/color" },
+        "muted": { "$ref": "#/$defs/color" },
+        "surface": { "$ref": "#/$defs/color" },
+        "surfaceElevated": { "$ref": "#/$defs/color" },
+        "border": { "$ref": "#/$defs/color" },
+        "codeBackground": { "$ref": "#/$defs/color" },
+        "codeForeground": { "$ref": "#/$defs/color" },
+        "inputBackground": { "$ref": "#/$defs/color" },
+        "buttonBackground": { "$ref": "#/$defs/color" },
+        "buttonForeground": { "$ref": "#/$defs/color" }
+      }
+    },
+    "layout": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["focusX", "focusY", "overlayStrength", "contentSide"],
+      "properties": {
+        "focusX": { "type": "number", "minimum": 0, "maximum": 100 },
+        "focusY": { "type": "number", "minimum": 0, "maximum": 100 },
+        "overlayStrength": { "type": "number", "minimum": 0, "maximum": 1 },
+        "contentSide": { "enum": ["left", "center", "right"] }
+      }
+    },
+    "assets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "background16x10",
+        "background16x9",
+        "background4x3",
+        "backgroundFallback",
+        "preview",
+        "screenshotHome",
+        "screenshotTask",
+        "screenshotNarrow",
+        "tokens"
+      ],
+      "properties": {
+        "background16x10": { "$ref": "#/$defs/relativePath" },
+        "background16x9": { "$ref": "#/$defs/relativePath" },
+        "background4x3": { "$ref": "#/$defs/relativePath" },
+        "backgroundFallback": { "$ref": "#/$defs/relativePath" },
+        "preview": { "$ref": "#/$defs/relativePath" },
+        "screenshotHome": { "$ref": "#/$defs/relativePath" },
+        "screenshotTask": { "$ref": "#/$defs/relativePath" },
+        "screenshotNarrow": { "$ref": "#/$defs/relativePath" },
+        "brandLogo": { "$ref": "#/$defs/relativePath" },
+        "captureEvidence": { "$ref": "#/$defs/relativePath" },
+        "previewEvidence": { "$ref": "#/$defs/relativePath" },
+        "tokens": { "$ref": "#/$defs/relativePath" }
+      }
+    },
+    "previewMetadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "label", "renderer"],
+      "properties": {
+        "kind": { "enum": ["illustrative", "verified-capture"] },
+        "label": { "type": "string", "minLength": 12, "maxLength": 100 },
+        "renderer": { "enum": ["html-css", "native-capture", "artwork"] },
+        "rendererVersion": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$", "maxLength": 24 },
+        "platform": { "enum": ["macos", "windows"] },
+        "codexVersion": { "type": "string", "minLength": 1, "maxLength": 40 }
+      }
+    },
+    "license": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "unofficial": { "const": true }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "previewMetadata": { "properties": { "kind": { "const": "verified-capture" } }, "required": ["kind"] } },
+        "required": ["previewMetadata"]
+      },
+      "then": { "properties": { "assets": { "required": ["captureEvidence"] } } }
+    },
+    {
+      "if": {
+        "properties": { "previewMetadata": { "properties": { "renderer": { "const": "html-css" } }, "required": ["renderer"] } },
+        "required": ["previewMetadata"]
+      },
+      "then": {
+        "properties": {
+          "assets": { "required": ["previewEvidence"] },
+          "previewMetadata": { "required": ["rendererVersion"] }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "color": { "type": "string", "pattern": "^(#[0-9A-Fa-f]{6}|rgba?\\([^\\r\\n]+\\))$" },
+    "relativePath": { "type": "string", "minLength": 1, "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[^\\r\\n]+$" }
+  }
+}

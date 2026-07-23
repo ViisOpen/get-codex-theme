@@ -1,0 +1,21 @@
+{
+  "name": "@getcodextheme/theme-schema",
+  "version": "0.1.0",
+  "description": "Canonical JSON Schema for Get Codex Theme packs.",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://getcodextheme.com/schema/manifest-v2.json",
+  "repository": { "type": "git", "url": "git+https://github.com/ViisOpen/get-codex-theme.git", "directory": "packages/theme-schema" },
+  "exports": {
+    "./manifest.schema.json": "./manifest.schema.json",
+    "./manifest-v2.schema.json": "./manifest-v2.schema.json",
+    "./visual-theme.schema.json": "./visual-theme.schema.json",
+    "./component-registry.json": "./component-registry.json"
+  },
+  "files": [
+    "manifest.schema.json",
+    "manifest-v2.schema.json",
+    "visual-theme.schema.json",
+    "component-registry.json"
+  ]
+}

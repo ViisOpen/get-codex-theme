@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 2,
+  "mode": "dark",
+  "palette": {
+    "accent": "#FFA31A",
+    "secondary": "#FF7A00",
+    "success": "#65D142",
+    "warning": "#FFC15A",
+    "danger": "#FF4D55",
+    "focusRing": "#FFA31A",
+    "background": "#050505",
+    "foreground": "#F5F5F5",
+    "muted": "#9A9A9A",
+    "surface": "rgba(8, 8, 8, 0.90)",
+    "surfaceElevated": "rgba(15, 15, 15, 0.96)",
+    "border": "rgba(255, 255, 255, 0.40)",
+    "codeBackground": "rgba(4, 4, 4, 0.97)",
+    "codeForeground": "#F5F5F5",
+    "inputBackground": "rgba(7, 7, 7, 0.96)",
+    "buttonBackground": "#FFA31A",
+    "buttonForeground": "#070707"
+  },
+  "layout": {
+    "focusX": 54.17,
+    "focusY": 48.82,
+    "overlayStrength": 0,
+    "contentSide": "center"
+  },
+  "uiTokens": {
+    "sidebar": {
+      "background": "rgba(8, 8, 8, 0.90)",
+      "foreground": "#F5F5F5",
+      "muted": "#9A9A9A",
+      "selectedBackground": "rgba(255, 163, 26, 0.22)",
+      "selectedForeground": "#F5F5F5",
+      "border": "rgba(255, 255, 255, 0.13)"
+    },
+    "card": {
+      "background": "rgba(15, 15, 15, 0.96)",
+      "foreground": "#F5F5F5",
+      "muted": "#9A9A9A",
+      "border": "rgba(255, 255, 255, 0.13)"
+    },
+    "input": {
+      "background": "rgba(7, 7, 7, 0.96)",
+      "foreground": "#F5F5F5",
+      "placeholder": "#9A9A9A",
+      "border": "rgba(255, 255, 255, 0.13)",
+      "focusRing": "#FFA31A"
+    },
+    "button": {
+      "background": "#FFA31A",
+      "foreground": "#070707",
+      "hoverBackground": "#FFB347",
+      "focusRing": "#FFA31A"
+    },
+    "text": {
+      "primary": "#F5F5F5",
+      "secondary": "#9A9A9A",
+      "accent": "#FFA31A"
+    },
+    "border": {
+      "subtle": "rgba(255, 255, 255, 0.13)",
+      "focus": "#FFA31A"
+    }
+  },
+  "backgroundTreatment": {
+    "globalOverlay": "none",
+    "localSurfacesOnly": true,
+    "safeArea": {
+      "x": 34,
+      "y": 28,
+      "width": 32,
+      "height": 64,
+      "contentSide": "center",
+      "confidence": 0.952
+    },
+    "subjectRegion": {
+      "x": 0.31,
+      "y": 0.47,
+      "width": 99.37,
+      "height": 99.06
+    }
+  },
+  "id": "codexhub",
+  "componentSchemaVersion": 2,
+  "authoring": {
+    "path": "complete",
+    "fallback": "adaptive",
+    "source": "image",
+    "preset": "sharp"
+  },
+  "coverage": {
+    "target": "complete",
+    "enabled": [
+      "foundation",
+      "buttons",
+      "icons",
+      "overlaysAndForms",
+      "taskArtifacts",
+      "feedback",
+      "utilityRoutes"
+    ],
+    "customized": [
+      "foundation",
+      "buttons",
+      "icons",
+      "overlaysAndForms",
+      "taskArtifacts",
+      "feedback",
+      "utilityRoutes"
+    ],
+    "generated": []
+  },
+  "components": {
+    "foundation": {
+      "surface": "rgba(8, 8, 8, 0.90)",
+      "surfaceElevated": "rgba(15, 15, 15, 0.96)",
+      "border": "rgba(255, 255, 255, 0.13)",
+      "focusRing": "#FFA31A"
+    },
+    "buttons": {
+      "disabledOpacity": 0.48,
+      "primaryBackground": "#FFA31A",
+      "primaryForeground": "#070707",
+      "secondaryBackground": "rgba(15, 15, 15, 0.96)",
+      "secondaryForeground": "#F5F5F5",
+      "hoverBackground": "rgba(255, 163, 26, 0.16)",
+      "destructiveBackground": "#FF4D55",
+      "destructiveForeground": "#FFFFFF"
+    },
+    "icons": {
+      "foreground": "#F5F5F5",
+      "muted": "#9A9A9A",
+      "accent": "#FFA31A",
+      "danger": "#FF4D55",
+      "containerBackground": "rgba(255, 163, 26, 0.14)"
+    },
+    "overlaysAndForms": {
+      "background": "rgba(15, 15, 15, 0.96)",
+      "foreground": "#F5F5F5",
+      "muted": "#9A9A9A",
+      "border": "rgba(255, 255, 255, 0.13)",
+      "inputBackground": "rgba(7, 7, 7, 0.96)",
+      "focusRing": "#FFA31A",
+      "selectedBackground": "rgba(255, 163, 26, 0.16)"
+    },
+    "taskArtifacts": {
+      "background": "rgba(8, 8, 8, 0.90)",
+      "toolBackground": "rgba(15, 15, 15, 0.96)",
+      "codeBackground": "rgba(4, 4, 4, 0.97)",
+      "codeForeground": "#F5F5F5",
+      "terminalBackground": "rgba(4, 4, 4, 0.97)",
+      "diffAdded": "rgba(101, 209, 66, 0.22)",
+      "diffRemoved": "rgba(255, 77, 85, 0.22)",
+      "border": "rgba(255, 255, 255, 0.13)"
+    },
+    "feedback": {
+      "success": "#65D142",
+      "warning": "#FFC15A",
+      "danger": "#FF4D55",
+      "info": "#FF7A00",
+      "badgeBackground": "rgba(255, 163, 26, 0.16)",
+      "loadingAccent": "#FFA31A"
+    },
+    "utilityRoutes": {
+      "background": "rgba(8, 8, 8, 0.90)",
+      "foreground": "#F5F5F5",
+      "muted": "#9A9A9A",
+      "activeBackground": "rgba(255, 163, 26, 0.16)",
+      "activeForeground": "#F5F5F5",
+      "hoverBackground": "rgba(255, 163, 26, 0.10)",
+      "border": "rgba(255, 255, 255, 0.13)"
+    }
+  }
+}

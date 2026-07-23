@@ -1,0 +1,7 @@
+Source: Original AI-assisted artwork generated specifically for the Get Codex Theme project.
+Author: Get Codex Theme contributors, commissioned by the project owner.
+Method: Generated with OpenAI built-in image generation on 2026-07-16 from an original porcelain installation art direction; resized and center-cropped into responsive derivatives; illustrative UI-state previews were composed locally without third-party media.
+Prompt: An original cobalt-and-white porcelain ribbon sculpture with tiny gold repair accents on the right against warm ivory plaster and generous negative space; no people, text, logos, UI, trademarks, or copied famous artwork.
+License: CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Attribution: “Porcelain Tide — GetCodexTheme.com”.
+Third-party media: None.

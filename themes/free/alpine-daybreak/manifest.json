@@ -1,0 +1,11 @@
+{
+  "$schema": "https://getcodextheme.com/schema/manifest-v1.json", "schemaVersion": 1, "id": "alpine-daybreak", "name": "Alpine Daybreak",
+  "description": "Snow light, warm oak, and a quiet mountain studio bring architectural clarity to a bright workspace.",
+  "version": "1.0.0", "mode": "light", "author": "Get Codex Theme contributors", "homepage": "https://getcodextheme.com/themes/alpine-daybreak",
+  "tags": ["light", "alpine", "studio", "wood", "minimal", "free"], "platforms": ["macos", "windows"], "delivery": ["visual-cdp"],
+  "palette": { "accent": "#4E7FA7", "background": "#EFF3F4", "foreground": "#1B2932", "muted": "#657680", "surface": "rgba(255, 255, 255, 0.80)", "surfaceElevated": "rgba(255, 255, 255, 0.95)", "border": "rgba(55, 82, 99, 0.64)", "codeBackground": "rgba(231, 237, 240, 0.94)", "codeForeground": "#1C303C", "inputBackground": "rgba(255, 255, 255, 0.94)", "buttonBackground": "#26475D", "buttonForeground": "#F7FBFD" },
+  "layout": { "focusX": 78, "focusY": 48, "overlayStrength": 0.45, "contentSide": "left" },
+  "assets": { "background16x10": "assets/background.jpg", "background16x9": "assets/background-16x9.jpg", "background4x3": "assets/background-4x3.jpg", "backgroundFallback": "assets/background.jpg", "preview": "assets/preview.jpg", "screenshotHome": "screenshots/home.jpg", "screenshotTask": "screenshots/task.jpg", "screenshotNarrow": "screenshots/narrow.jpg", "tokens": "tokens/visual-theme.json" },
+  "previewMetadata": { "kind": "illustrative", "label": "Illustrative concept preview — not a live Codex capture" },
+  "license": "CC-BY-4.0", "unofficial": true
+}

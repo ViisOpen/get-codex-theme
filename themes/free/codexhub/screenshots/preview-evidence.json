@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "renderer": "get-codex-theme-html-css",
+  "rendererVersion": "1.0.0",
+  "browserVersion": "Google Chrome 150.0.7871.130",
+  "theme": {
+    "id": "codexhub",
+    "version": "1.0.1",
+    "fingerprint": "385626d6f9618edec286a5985ca824dd6c544e2ee0286dadbe19a0d6c405d106"
+  },
+  "states": {
+    "home": {
+      "state": "home",
+      "file": "screenshots/home.jpg",
+      "width": 1200,
+      "height": 750,
+      "sha256": "6ccd4250acfcdb57351defd0e1c72ef063fcff703fdd8dd1fcf135ab56d9ab13"
+    },
+    "task": {
+      "state": "task",
+      "file": "screenshots/task.jpg",
+      "width": 1200,
+      "height": 750,
+      "sha256": "7e38b3738081394af868be85dfb63360d25e5ae3444cb86fb3cd01a4271545ec"
+    },
+    "narrow": {
+      "state": "narrow",
+      "file": "screenshots/narrow.jpg",
+      "width": 750,
+      "height": 1000,
+      "sha256": "a551f0b1daacd5e32676f20b3108e7846fb5e7ff093551c7c1d7bf2f81e010ee"
+    }
+  }
+}

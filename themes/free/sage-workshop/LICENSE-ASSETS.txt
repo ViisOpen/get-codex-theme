@@ -1,0 +1,4 @@
+Source: Original abstract artwork created for the Get Codex Theme project.
+Author: Get Codex Theme contributors, commissioned by the project owner.
+Method: Procedurally rendered gradients and geometric light fields; responsive crops and illustrative UI-state previews contain no third-party source media.
+License: CC BY 4.0. Attribution: “Sage Workshop — GetCodexTheme.com”.

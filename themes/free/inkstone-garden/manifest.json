@@ -1,0 +1,11 @@
+{
+  "$schema": "https://getcodextheme.com/schema/manifest-v1.json", "schemaVersion": 1, "id": "inkstone-garden", "name": "Inkstone Garden",
+  "description": "Rain-dark stone, silver mist, and restrained jade reflections shape a meditative garden for focused work.",
+  "version": "1.0.0", "mode": "dark", "author": "Get Codex Theme contributors", "homepage": "https://getcodextheme.com/themes/inkstone-garden",
+  "tags": ["dark", "ink", "garden", "stone", "minimal", "free"], "platforms": ["macos", "windows"], "delivery": ["visual-cdp"],
+  "palette": { "accent": "#7FB6A3", "background": "#0E1414", "foreground": "#F0F4F2", "muted": "#9CAAA5", "surface": "rgba(14, 23, 23, 0.86)", "surfaceElevated": "rgba(24, 36, 34, 0.94)", "border": "rgba(151, 190, 176, 0.50)", "codeBackground": "rgba(8, 14, 14, 0.94)", "codeForeground": "#EAF3EF", "inputBackground": "rgba(19, 31, 30, 0.94)", "buttonBackground": "#B7D8CC", "buttonForeground": "#14221E" },
+  "layout": { "focusX": 79, "focusY": 48, "overlayStrength": 0.62, "contentSide": "left" },
+  "assets": { "background16x10": "assets/background.jpg", "background16x9": "assets/background-16x9.jpg", "background4x3": "assets/background-4x3.jpg", "backgroundFallback": "assets/background.jpg", "preview": "assets/preview.jpg", "screenshotHome": "screenshots/home.jpg", "screenshotTask": "screenshots/task.jpg", "screenshotNarrow": "screenshots/narrow.jpg", "tokens": "tokens/visual-theme.json" },
+  "previewMetadata": { "kind": "illustrative", "label": "Illustrative concept preview — not a live Codex capture" },
+  "license": "CC-BY-4.0", "unofficial": true
+}

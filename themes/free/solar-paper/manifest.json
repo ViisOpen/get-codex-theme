@@ -1,0 +1,11 @@
+{
+  "$schema": "https://getcodextheme.com/schema/manifest-v1.json", "schemaVersion": 1, "id": "solar-paper", "name": "Solar Paper",
+  "description": "A cream editorial canvas with amber sunlight, paper texture, and focused writing surfaces.",
+  "version": "1.0.0", "mode": "light", "author": "Get Codex Theme contributors", "homepage": "https://getcodextheme.com/themes/solar-paper",
+  "tags": ["light", "paper", "editorial", "warm", "free"], "platforms": ["macos", "windows"], "delivery": ["visual-cdp"],
+  "palette": { "accent": "#B36717", "background": "#F7F0DF", "foreground": "#30271D", "muted": "#776858", "surface": "rgba(255, 252, 243, 0.85)", "surfaceElevated": "rgba(255, 254, 249, 0.96)", "border": "rgba(106, 79, 45, 0.67)", "codeBackground": "rgba(243, 234, 215, 0.95)", "codeForeground": "#3A2D20", "inputBackground": "rgba(255, 253, 246, 0.95)", "buttonBackground": "#3A2D20", "buttonForeground": "#FFF9EA" },
+  "layout": { "focusX": 76, "focusY": 42, "overlayStrength": 0.58, "contentSide": "left" },
+  "assets": { "background16x10": "assets/background.jpg", "background16x9": "assets/background-16x9.jpg", "background4x3": "assets/background-4x3.jpg", "backgroundFallback": "assets/background.jpg", "preview": "assets/preview.jpg", "screenshotHome": "screenshots/home.jpg", "screenshotTask": "screenshots/task.jpg", "screenshotNarrow": "screenshots/narrow.jpg", "tokens": "tokens/visual-theme.json" },
+  "previewMetadata": { "kind": "illustrative", "label": "Illustrative concept preview — not a live Codex capture" },
+  "license": "CC-BY-4.0", "unofficial": true
+}

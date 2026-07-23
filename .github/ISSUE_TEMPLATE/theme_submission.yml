@@ -1,0 +1,34 @@
+name: Theme submission
+description: Propose an original, redistributable Codex theme pack.
+title: "[Theme]: "
+labels: [theme]
+body:
+  - type: input
+    id: theme
+    attributes:
+      label: Theme name and repository branch
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Validation and platform evidence
+      description: Include strict-validator output, tested platforms, Codex version, and restore result.
+    validations:
+      required: true
+  - type: textarea
+    id: rights
+    attributes:
+      label: Asset provenance and license
+      description: Identify source, author, method, edits, and redistribution license.
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: The submitted assets are original or explicitly redistributable under the declared license.
+          required: true
+        - label: The theme passes strict validation and includes a complete restore path.
+          required: true

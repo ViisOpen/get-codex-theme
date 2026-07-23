@@ -1,0 +1,7 @@
+Source: Original AI-assisted artwork generated specifically for the Get Codex Theme project.
+Author: Get Codex Theme contributors, commissioned by the project owner.
+Method: Generated with OpenAI built-in image generation on 2026-07-16 from an original desert eclipse art direction; resized and center-cropped into responsive derivatives; illustrative UI-state previews were composed locally without third-party media.
+Prompt: A monumental eclipse above copper-lit mineral desert ridges on the right with smooth smoky sky and shadowed dunes reserved for content on the left; no people, animals, buildings, text, logos, UI, trademarks, or copyrighted characters.
+License: CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Attribution: “Desert Eclipse — GetCodexTheme.com”.
+Third-party media: None.

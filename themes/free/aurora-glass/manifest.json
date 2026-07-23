@@ -1,0 +1,11 @@
+{
+  "$schema": "https://getcodextheme.com/schema/manifest-v1.json", "schemaVersion": 1, "id": "aurora-glass", "name": "Aurora Glass",
+  "description": "A cinematic blue-violet aurora with soft glass surfaces and a luminous right-side focal point.",
+  "version": "1.0.0", "mode": "dark", "author": "Get Codex Theme contributors", "homepage": "https://getcodextheme.com/themes/aurora-glass",
+  "tags": ["dark", "glass", "aurora", "cinematic", "free"], "platforms": ["macos", "windows"], "delivery": ["visual-cdp"],
+  "palette": { "accent": "#8B7CFF", "background": "#0A0812", "foreground": "#F7F5FF", "muted": "#B8B3CC", "surface": "rgba(17, 14, 29, 0.86)", "surfaceElevated": "rgba(30, 25, 49, 0.94)", "border": "rgba(226, 220, 255, 0.40)", "codeBackground": "rgba(10, 8, 18, 0.92)", "codeForeground": "#F4F1FF", "inputBackground": "rgba(21, 18, 33, 0.92)", "buttonBackground": "#EEEAFE", "buttonForeground": "#171126" },
+  "layout": { "focusX": 76, "focusY": 46, "overlayStrength": 0.76, "contentSide": "left" },
+  "assets": { "background16x10": "assets/background.jpg", "background16x9": "assets/background-16x9.jpg", "background4x3": "assets/background-4x3.jpg", "backgroundFallback": "assets/background.jpg", "preview": "assets/preview.jpg", "screenshotHome": "screenshots/home.jpg", "screenshotTask": "screenshots/task.jpg", "screenshotNarrow": "screenshots/narrow.jpg", "tokens": "tokens/visual-theme.json" },
+  "previewMetadata": { "kind": "illustrative", "label": "Illustrative concept preview — not a live Codex capture" },
+  "license": "CC-BY-4.0", "unofficial": true
+}

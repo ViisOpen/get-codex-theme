@@ -1,0 +1,65 @@
+{
+  "name": "@getcodextheme/website",
+  "version": "0.1.0",
+  "description": "Public website application for the free Get Codex Theme community Registry.",
+  "private": true,
+  "license": "MIT",
+  "homepage": "https://getcodextheme.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViisOpen/get-codex-theme.git",
+    "directory": "apps/website"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "prepare:assets": "node scripts/prepare-public-assets.mjs",
+    "dev": "npm run prepare:assets && WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext dev",
+    "build": "npm run prepare:assets && WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext build",
+    "deploy:cloudflare": "npm run build && wrangler deploy --config wrangler.jsonc && npm run verify:deployment",
+    "deploy:dry-run": "npm run build && wrangler deploy --dry-run --config wrangler.jsonc",
+    "db:migrate:production": "wrangler d1 migrations apply getcodextheme-production --remote --config wrangler.jsonc",
+    "types:cloudflare": "wrangler types worker-configuration.d.ts --include-runtime false --config wrangler.jsonc",
+    "verify:deployment": "node scripts/verify-deployment-assets.mjs",
+    "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
+    "test": "npm run lint && npm run typecheck && npm run build && npm run test:unit && npm run test:seo && npm run test:site",
+    "test:unit": "npm run prepare:assets && node --test tests/concept-themes.test.mjs tests/css-regression-*.test.mjs tests/google-theme-pack.test.mjs tests/open-source-sync.test.mjs tests/theme-submission.test.mjs tests/theme-community.test.mjs",
+    "test:seo": "CODEX_TEST_EPHEMERAL=1 node --test tests/seo-routes.test.mjs",
+    "test:site": "CODEX_TEST_EPHEMERAL=1 node --test tests/site-render.test.mjs",
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "typecheck": "tsc --noEmit",
+    "db:generate": "drizzle-kit generate"
+  },
+  "dependencies": {
+    "@neondatabase/auth": "0.4.2-beta",
+    "@phosphor-icons/react": "^2.1.10",
+    "drizzle-orm": "0.45.2",
+    "framer-motion": "^12.42.2",
+    "get-codex-theme": "0.7.0",
+    "jszip": "^3.10.1",
+    "next": "16.2.10",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.37.1",
+    "@cloudflare/workers-types": "^5.20260722.1",
+    "@tailwindcss/postcss": "4.2.1",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "@vitejs/plugin-rsc": "0.5.26",
+    "drizzle-kit": "0.31.10",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.2.6",
+    "react-server-dom-webpack": "19.2.6",
+    "tailwindcss": "4.2.1",
+    "typescript": "5.9.3",
+    "vinext": "0.0.50",
+    "vite": "^8.1.5",
+    "wrangler": "^4.111.0"
+  },
+  "type": "module"
+}

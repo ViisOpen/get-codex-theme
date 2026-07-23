@@ -1,0 +1,31 @@
+{
+  "name": "get-codex-theme",
+  "version": "0.7.0",
+  "description": "Create, validate, install, switch, and safely restore portable Codex themes.",
+  "author": {
+    "name": "VIIS Labs",
+    "url": "https://getcodextheme.com"
+  },
+  "homepage": "https://getcodextheme.com/open-source",
+  "repository": "https://github.com/ViisOpen/get-codex-theme",
+  "license": "MIT",
+  "keywords": ["codex", "themes", "theme-packs", "personalization"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Get Codex Theme",
+    "shortDescription": "Create and manage portable Codex themes",
+    "longDescription": "Create a standards-compliant theme from artwork or a palette, validate its assets and licensing, install it, switch themes, diagnose compatibility, and restore the original Codex appearance.",
+    "developerName": "VIIS Labs",
+    "category": "Productivity",
+    "capabilities": ["Create", "Validate", "Install"],
+    "websiteURL": "https://getcodextheme.com",
+    "privacyPolicyURL": "https://getcodextheme.com/privacy",
+    "termsOfServiceURL": "https://getcodextheme.com/terms",
+    "defaultPrompt": [
+      "Create a Codex theme from my image.",
+      "Validate this Codex theme pack.",
+      "Install a theme and verify it safely."
+    ],
+    "brandColor": "#8B7CFF"
+  }
+}

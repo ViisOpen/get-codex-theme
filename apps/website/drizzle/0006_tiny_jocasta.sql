@@ -1,0 +1,1 @@
+ALTER TABLE `publisher_oauth_states` RENAME COLUMN "code_verifier" TO "request_token_secret";

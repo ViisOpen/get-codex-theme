@@ -1,0 +1,11 @@
+{
+  "$schema": "https://getcodextheme.com/schema/manifest-v1.json", "schemaVersion": 1, "id": "desert-eclipse", "name": "Desert Eclipse",
+  "description": "Copper-lit mineral ridges and a monumental eclipse create cinematic depth without crowding the work surface.",
+  "version": "1.0.0", "mode": "dark", "author": "Get Codex Theme contributors", "homepage": "https://getcodextheme.com/themes/desert-eclipse",
+  "tags": ["dark", "desert", "eclipse", "copper", "landscape", "free"], "platforms": ["macos", "windows"], "delivery": ["visual-cdp"],
+  "palette": { "accent": "#F28A4B", "background": "#1A0B08", "foreground": "#FFF4EB", "muted": "#CBB0A4", "surface": "rgba(29, 12, 9, 0.86)", "surfaceElevated": "rgba(48, 22, 16, 0.94)", "border": "rgba(242, 153, 94, 0.52)", "codeBackground": "rgba(15, 6, 5, 0.95)", "codeForeground": "#FFEBDD", "inputBackground": "rgba(38, 16, 12, 0.94)", "buttonBackground": "#F6A66E", "buttonForeground": "#2A1009" },
+  "layout": { "focusX": 79, "focusY": 42, "overlayStrength": 0.63, "contentSide": "left" },
+  "assets": { "background16x10": "assets/background.jpg", "background16x9": "assets/background-16x9.jpg", "background4x3": "assets/background-4x3.jpg", "backgroundFallback": "assets/background.jpg", "preview": "assets/preview.jpg", "screenshotHome": "screenshots/home.jpg", "screenshotTask": "screenshots/task.jpg", "screenshotNarrow": "screenshots/narrow.jpg", "tokens": "tokens/visual-theme.json" },
+  "previewMetadata": { "kind": "illustrative", "label": "Illustrative concept preview — not a live Codex capture" },
+  "license": "CC-BY-4.0", "unofficial": true
+}

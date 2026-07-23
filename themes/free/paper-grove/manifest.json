@@ -1,0 +1,11 @@
+{
+  "$schema": "https://getcodextheme.com/schema/manifest-v1.json", "schemaVersion": 1, "id": "paper-grove", "name": "Paper Grove",
+  "description": "Layered vellum trees, pale moss, and a winding paper path form a quiet handcrafted landscape for work.",
+  "version": "1.0.0", "mode": "light", "author": "Get Codex Theme contributors", "homepage": "https://getcodextheme.com/themes/paper-grove",
+  "tags": ["light", "paper", "forest", "handcrafted", "calm", "free"], "platforms": ["macos", "windows"], "delivery": ["visual-cdp"],
+  "palette": { "accent": "#66806A", "background": "#F0F0E9", "foreground": "#263029", "muted": "#68736B", "surface": "rgba(253, 253, 248, 0.83)", "surfaceElevated": "rgba(255, 255, 255, 0.96)", "border": "rgba(72, 96, 78, 0.70)", "codeBackground": "rgba(234, 237, 230, 0.95)", "codeForeground": "#26342B", "inputBackground": "rgba(255, 255, 255, 0.94)", "buttonBackground": "#3F5D48", "buttonForeground": "#F9FCF8" },
+  "layout": { "focusX": 79, "focusY": 49, "overlayStrength": 0.46, "contentSide": "left" },
+  "assets": { "background16x10": "assets/background.jpg", "background16x9": "assets/background-16x9.jpg", "background4x3": "assets/background-4x3.jpg", "backgroundFallback": "assets/background.jpg", "preview": "assets/preview.jpg", "screenshotHome": "screenshots/home.jpg", "screenshotTask": "screenshots/task.jpg", "screenshotNarrow": "screenshots/narrow.jpg", "tokens": "tokens/visual-theme.json" },
+  "previewMetadata": { "kind": "illustrative", "label": "Illustrative concept preview — not a live Codex capture" },
+  "license": "CC-BY-4.0", "unofficial": true
+}

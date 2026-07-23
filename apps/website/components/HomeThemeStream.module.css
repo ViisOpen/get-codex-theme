@@ -1,0 +1,519 @@
+.section {
+  background: #050506;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  min-height: 100svh;
+  padding: clamp(6rem, 9vw, 9rem) max(1.5rem, calc((100vw - 90rem) / 2)) 4rem;
+}
+
+.intro {
+  align-items: end;
+  display: grid;
+  gap: clamp(2rem, 5vw, 6rem);
+  grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.65fr);
+}
+
+.kicker {
+  color: #b9adff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  margin: 0 0 1.25rem;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  letter-spacing: -0.04em;
+  line-height: 0.88;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.title em {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.65;
+  margin: 0 0 0.4rem;
+  max-width: 37rem;
+  text-wrap: pretty;
+}
+
+.scopePicker {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: clamp(3rem, 6vw, 5.5rem);
+  max-width: 50rem;
+}
+
+.scopeButton,
+.scopeActive {
+  align-items: flex-start;
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  border-radius: 14px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-height: 5.4rem;
+  padding: 1rem 1.1rem;
+  text-align: left;
+}
+
+.scopeButton {
+  background: rgba(255, 255, 255, 0.035);
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.scopeActive {
+  background: #f5f3ed;
+  color: #111;
+}
+
+.scopeButton strong,
+.scopeActive strong {
+  font-size: 1rem;
+}
+
+.scopeButton span,
+.scopeActive span {
+  font-size: 0.78rem;
+}
+
+.toolbar {
+  align-items: end;
+  backdrop-filter: blur(24px);
+  background: rgba(13, 13, 15, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 14px;
+  display: grid;
+  gap: 1rem 1.5rem;
+  grid-template-columns: minmax(16rem, 0.75fr) minmax(8rem, 0.24fr) minmax(0, 1.25fr);
+  margin-top: 1rem;
+  padding: 0.9rem;
+  position: sticky;
+  top: 0.75rem;
+  z-index: 20;
+}
+
+.searchField {
+  color: rgba(255, 255, 255, 0.72);
+  display: grid;
+  font-size: 0.72rem;
+  font-weight: 600;
+  gap: 0.5rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sortField {
+  color: rgba(255, 255, 255, 0.72);
+  display: grid;
+  font-size: 0.72rem;
+  font-weight: 600;
+  gap: 0.5rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sortField select {
+  appearance: none;
+  background: #070708;
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  border-radius: 9px;
+  color: #fff;
+  min-height: 3rem;
+  padding: 0 2rem 0 0.9rem;
+}
+
+.searchField input {
+  background: #070708;
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  border-radius: 9px;
+  color: #fff;
+  min-height: 3rem;
+  padding: 0 0.9rem;
+  width: 100%;
+}
+
+.searchField input::placeholder {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.authorLinks {
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.authorLinks a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.authorLinks a:hover {
+  color: #fff;
+}
+
+.searchField input:focus-visible,
+.sortField select:focus-visible,
+.scopeButton:focus-visible,
+.scopeActive:focus-visible,
+.filter:focus-visible,
+.filterActive:focus-visible,
+.loadMore:focus-visible,
+.empty button:focus-visible,
+.empty a:focus-visible,
+.cardLink:focus-visible {
+  outline: 2px solid #a895ff;
+  outline-offset: 3px;
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  overflow-x: auto;
+  padding: 0.25rem 0;
+  scrollbar-width: none;
+}
+
+.filters::-webkit-scrollbar {
+  display: none;
+}
+
+.filterHint {
+  display: none;
+}
+
+.filter,
+.filterActive {
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  border-radius: 999px;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-size: 0.8rem;
+  min-height: 2.65rem;
+  padding: 0 1rem;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.filter {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.filter:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
+}
+
+.filterActive {
+  background: #f5f3ed;
+  border-color: #f5f3ed;
+  color: #111;
+}
+
+.resultBar {
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  font-size: 0.78rem;
+  justify-content: space-between;
+  min-height: 4rem;
+}
+
+.resultBar span:first-child {
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.card {
+  background: #0d0d0f;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 14px;
+  grid-column: span 3;
+  min-width: 0;
+  overflow: hidden;
+  transition: border-color 220ms ease, transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cardLink {
+  color: #fff;
+  display: block;
+}
+
+.card:hover {
+  border-color: color-mix(in srgb, var(--theme-card-accent) 62%, white 12%);
+  transform: translateY(-4px);
+}
+
+.preview {
+  background: #080809;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.55rem;
+}
+
+.mockup {
+  border-radius: 9px !important;
+  box-shadow: none !important;
+}
+
+.cardBody {
+  padding: clamp(1.15rem, 2vw, 1.65rem);
+}
+
+.cardMeta {
+  align-items: center;
+  color: rgba(255, 255, 255, 0.52);
+  display: flex;
+  font-size: 0.69rem;
+  justify-content: space-between;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.mode {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.mode i {
+  border: 1px solid rgba(255, 255, 255, 0.36);
+  border-radius: 50%;
+  display: inline-block;
+  height: 0.55rem;
+  width: 0.55rem;
+}
+
+.cardBody h3 {
+  font-size: clamp(1.65rem, 2.25vw, 2.65rem);
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+  margin: 1.65rem 0 0.55rem;
+  text-wrap: balance;
+}
+
+.cardBody p {
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  list-style: none;
+  margin: 1.4rem 0 0;
+  padding: 0;
+}
+
+.tags li {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.7rem;
+  padding: 0.4rem 0.65rem;
+}
+
+.cardFooter {
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  min-height: 3.7rem;
+  padding: 0.7rem clamp(1.15rem, 2vw, 1.65rem);
+}
+
+.cardFooter > a {
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.76rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardFooter > a:hover { color: #fff; }
+
+.conceptLabel {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.empty {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: clamp(2rem, 6vw, 5rem);
+  text-align: center;
+}
+
+.empty h3 {
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  letter-spacing: -0.035em;
+  margin: 0;
+}
+
+.empty p {
+  color: rgba(255, 255, 255, 0.64);
+  line-height: 1.65;
+  margin: 1rem auto 1.5rem;
+  max-width: 38rem;
+}
+
+.empty button,
+.empty a,
+.loadMore {
+  background: #f5f3ed;
+  border: 0;
+  border-radius: 999px;
+  color: #111;
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 600;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0 1.25rem;
+}
+
+.loadArea {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 3rem 0 1rem;
+  position: relative;
+}
+
+.sentinel {
+  height: 1px;
+  width: 100%;
+}
+
+.loadArea > span {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.74rem;
+}
+
+.directoryFooter {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.52);
+  display: flex;
+  font-size: 0.78rem;
+  justify-content: space-between;
+  margin-top: 4rem;
+  padding-top: 1.3rem;
+}
+
+.directoryFooter a {
+  color: #c3b9ff;
+}
+
+@media (max-width: 68rem) {
+  .toolbar {
+    align-items: stretch;
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    justify-content: flex-start;
+  }
+
+  .card {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 46rem) {
+  .section {
+    padding: 5.5rem 1rem 3rem;
+  }
+
+  .intro {
+    align-items: start;
+    gap: 1.6rem;
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: clamp(3rem, 15vw, 4.25rem);
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .toolbar {
+    margin-inline: -0.15rem;
+    position: static;
+  }
+
+  .filters {
+    margin-inline: -0.9rem;
+    padding-inline: 0.9rem;
+  }
+
+  .scopePicker {
+    grid-template-columns: 1fr;
+  }
+
+  .filterHint {
+    color: rgba(255, 255, 255, 0.68);
+    display: block;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    margin-top: -0.45rem;
+    text-align: right;
+  }
+
+  .resultBar {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .card {
+    grid-column: 1 / -1;
+  }
+
+  .cardBody h3 {
+    font-size: 2.45rem;
+  }
+
+  .directoryFooter {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.8rem;
+    line-height: 1.5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .filter,
+  .filterActive {
+    transition-duration: 0.01ms;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+}

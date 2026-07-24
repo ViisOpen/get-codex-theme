@@ -15,11 +15,10 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v5
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
-          registry-url: https://registry.npmjs.org
-          cache: npm
+          package-manager-cache: false
       - run: npm install --global npm@12.0.1
       - run: npm ci
       - run: npm run test:core
@@ -76,7 +75,7 @@ jobs:
               exit 1
             fi
           elif grep -q 'E404' "$error_log"; then
-            npm publish "${{ steps.pack.outputs.tarball }}" --access public
+            npm publish "${{ steps.pack.outputs.tarball }}" --access public --provenance
           else
             cat "$error_log" >&2
             echo "Unable to determine registry state; refusing to publish." >&2

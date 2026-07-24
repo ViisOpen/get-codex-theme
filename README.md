@@ -7,6 +7,10 @@ reversible compatibility runtime behind
 > Unofficial themes for Codex Desktop. Not affiliated with or endorsed by
 > OpenAI.
 
+**Start here:** [Codex Appearance settings guide](https://getcodextheme.com/guides/codex-appearance-settings)
+for native themes, colors, UI and code fonts, sharing, and the boundary between
+official Appearance controls and optional visual packs.
+
 This public monorepo contains both the reusable toolkit and the hosted website
 application. Production secrets, service resource IDs, live data, publisher
 uploads, and local deployment state stay outside Git.
@@ -23,6 +27,18 @@ uploads, and local deployment state stay outside Git.
 - `runtime` and `platforms` — optional macOS/Windows CDP compatibility layer.
 - `docs` — pack format, compatibility, safety, installation, and contribution
   requirements.
+
+## Codex Appearance reference
+
+Codex Desktop Appearance and Codex CLI themes are separate systems. The
+desktop app exposes native appearance controls; the CLI uses `/theme` and
+supports custom `.tmTheme` files. Artwork-heavy packs in this repository are
+unofficial, stay outside the signed app, and include an explicit restore path.
+
+- [Codex Appearance settings: themes, colors, fonts, and sharing](https://getcodextheme.com/guides/codex-appearance-settings)
+- [Official Codex app settings reference](https://learn.chatgpt.com/docs/reference/settings)
+- [Official Codex CLI customization reference](https://learn.chatgpt.com/docs/cli-customization)
+- [Browse free Codex themes](https://getcodextheme.com/themes)
 
 ## Quick start
 
